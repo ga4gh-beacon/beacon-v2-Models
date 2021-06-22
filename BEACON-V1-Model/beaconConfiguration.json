@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/configuration/beaconConfigurationSchema.json",
+
+  "maturityAttributes": {
+    "productionStatus": "DEV"
+  },
+  "securityAttributes": {
+    "defaultGranularity": "record",
+    "securityLevels": ["PUBLIC"]
+  },
+  "entryTypes": {
+    "dataset": {
+      "id": "dataset",
+      "name": "Dataset",
+      "ontologyTermForThisType": {
+        "id": "NCIT:C47824",
+        "label": "Data set"
+      },
+      "partOfSpecification": "Beacon v2.0.0-draft.3",
+      "description": "A Dataset is a collection of records, like rows in a database or cards in a cardholder.",
+      "defaultSchema": {
+        "id": "ga4gh-beacon-dataset-v2.0.0-draft.3",
+        "name": "Default schema for datasets",
+        "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
+        "schemaVersion": "v2.0.0-draft.3"
+      },
+      "aCollectionOf": [{ "id": "genomicVariant", "name": "Genomic Variants" }],
+      "additionalSupportedSchemas": []
+    },
+    "genomicVariant": {
+      "id": "genomicVariant",
+      "name": "Genomic Variants",
+      "ontologyTermForThisType": {
+        "id": "NCIT:C36391",
+        "label": "Molecular Genetic Variation"
+      },
+      "partOfSpecification": "Beacon v2.0.0-draft.3",
+      "description": "Any alteration in the inherited nucleic acid sequence of the genotype of an organism. [ NCI ]\n",
+      "defaultSchema": {
+        "id": "ga4gh-beacon-variant-v2.0.0-draft.3",
+        "name": "Default schema for a genomic variation",
+        "referenceToSchemaDefinition": "./genomicVariations/defaultSchema.json",
+        "schemaVersion": "v2.0.0-draft.3"
+      },
+      "additionallySupportedSchemas": []
+    }
+  }
+}

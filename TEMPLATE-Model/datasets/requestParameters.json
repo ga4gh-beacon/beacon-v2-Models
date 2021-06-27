@@ -1,0 +1,12 @@
+{
+  "$schema": "../../beacon-framework-v2/requests/requestParameters.json",
+  "exampleEntry": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "Id of the entry to display.\n",
+        "type": "string"
+      }
+    }
+  }
+}

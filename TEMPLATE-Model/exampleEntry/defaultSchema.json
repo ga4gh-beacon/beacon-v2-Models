@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Example Entry",
+  "description": "Schema for a basic example entry.",
+  "type":"object",
+  "properties": {
+    "id": { "type": "string", "description": "A (unique) identifier of the element." },
+    "name": { "type":"string", "description": "A distinctive name for the element."},
+    "anotherProp": { "type":"integer", "description": "A random number.", "default": 42}
+  },
+  "required": ["id", "name"],
+  "additionalProperties": true
+} 

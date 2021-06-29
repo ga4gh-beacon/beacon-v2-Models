@@ -4,7 +4,7 @@
   "description": "Schema for a genomic variation entry.",
   "type":"object",
   "properties": {
-    "variantId": {
+    "id": {
       "description": "Reference to variant ID (internal ID).\n",
       "type": "string"
     },
@@ -48,12 +48,12 @@
       "minItems": 0,
       "maxItems": 2
     },
-    "ReferenceBases": {
+    "referenceBases": {
       "description": "Reference bases for this variant (starting from `start`). * Accepted values: [ACGTN]*. * N is a wildcard, that denotes the position of any base, and can be used as a standalone base of any type or within a partially known sequence. As example, a query of `ANNT` the Ns can take take any form of [ACGT] and will match `ANNT`, `ACNT`, `ACCT`, `ACGT` ... and so forth. * an *empty value* is used in the case of insertions with the maximally trimmed, inserted sequence being indicated in `AlternateBases`\n",
       "type": "string",
       "pattern": "^([ACGTN]*)$"
     },
-    "AlternateBases": {
+    "alternateBases": {
       "description": "Alternate bases for this variant (starting from `start`).\n* Accepted values: [ACGTN]*.\n* N is a wildcard, that denotes the position of any base, and can be\nused as a standalone base of any type or within a partially known\nsequence. As example, a query of `ANNT` the Ns can take take any form of\n[ACGT] and will match `ANNT`, `ACNT`, `ACCT`, `ACGT` ... and so forth.\n* an *empty value* is used in the case of deletions with the maximally\ntrimmed, deleted sequence being indicated in `ReferenceBases`\n* Categorical variant queries, e.g. such *not* being represented through\nsequence & position, make use of the `variantType` parameter.\n* either `alternateBases` or `variantType` is required.\n",
       "type": "string",
       "pattern": "^([ACGTN]*)$"

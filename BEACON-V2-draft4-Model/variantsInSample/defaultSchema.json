@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Sequencing run",
+  "$comment": "version: ga4gh-beacon-biosample-v2.0.0-draft.3",
+  "description": "Schema for a sequencing run.",
+  "type":"object",
+  "properties": {
+    "variantId": {
+      "description": "ID referencing the variant in beacon (internal ID) ##todo check?\n",
+      "type": "string"
+    },
+    "analysisId": {
+      "description": "Reference to run (Run.runId)\n",
+      "type": "string",
+      "example": "SRR10903401"
+    },
+    "biosampleId": {
+      "description": "Reference to biosample ID.\n",
+      "type": "string"
+    },
+    "variantFrequency": {
+      "description": "Variant frequency in sample, as in AF field in VCF for case-level datasets.\nFrequency in dataset for aggregated variant-level datasets.\n",
+      "type": "number",
+      "minimum": 0,
+      "example": 1
+    },
+    "zigosity": {
+      "description": "Ontology value for zigosity in which variant is present in the sample \nfrom the Zigosity Ontology (GENO:0000133) , e.g \"heterozygous\" (GENO:0000135)\n",
+      "type": "string",
+      "example": "GENO:0000135"
+    },
+    "alleleOrigin": {
+      "description": "Ontology value for allele origin of variant in sample from the Variant Origin (SO:0001762). \nCategories are \"somatic variant\", \"germline variant\", \"maternal variant\", \n\"paternal variant\", \"de novo variant\", \"pedigree specific variant\", \n\"population specific variant\". \nCorresponds to Variant Inheritance in FHIR.\n",
+      "type": "string",
+      "enum": [
+        "somatic variant",
+        "germline variant",
+        "maternal variant",
+        "paternal variant",
+        "de novo variant",
+        "pedigree specific variant",
+        "population specific variant"
+      ],
+      "example": "somatic variant"
+    },
+    "clinicalRelevance": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ClinicalRelevance"
+      }
+    },
+    "phenotypicEffect": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PhenotypicEffect"
+      }
+    },
+    "info": {
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"
+    }
+  },
+  "definitions": {
+    "ClinicalRelevance": {
+      "description": "Descriptor of clinical relevance as described to the variant, including \nthe variant classification, the disease identifier and references of \nstudies supporting the association.\n",
+      "type": "object",
+      "properties": {
+        "clinicalEffect": {
+          "description": "Value from Sequence types and features ontology (SO) variant \nphenotype (SO:0001769), e.g. \"disease causing variant\" (SO:0001772).\n",
+          "type": "string",
+          "enum": [
+            "benign",
+            "likely benign",
+            "pathogenic",
+            "likely pathogenic",
+            "unknown"
+          ],
+          "example": "pathogenic"
+        },
+        "diseaseId": {
+          "description": "Reference to DiseaseId from Disease object from Individual schema, \ne.g. MONDO:0003582 (Hereditary breast ovarian cancer syndrome).\n",
+          "type": "string",
+          "example": "MONDO:0003582"
+        },
+        "evidenceType": {
+          "description": "Ontology value for type of evidence supporting variant-disease \nassociation from the Evidence & Conclusion Ontology (ECO)\n",
+          "type": "string",
+          "example": "experimental evidence"
+        }
+      }
+    },
+    "PhenotypicEffect": {
+      "description": "List of annotated effect on disease.\n",
+      "type": "object",
+      "properties": {
+        "phenotypeId": {
+          "description": "Descriptor of phenotype found associated in this study\n",
+          "type": "string",
+          "example": ""
+        },
+        "phenotypeEffect": {
+          "description": "Ontology value for phenotypic effect classification determined in this study\n",
+          "type": "string",
+          "example": ""
+        },
+        "evidenceType": {
+          "description": "Ontology value for type of evidence supporting variant-disease \nassociation from the Evidence & Conclusion Ontology (ECO)\n",
+          "type": "string",
+          "example": "experimental evidence"
+        }
+      }
+    }
+  }
+  , "required": ["variantId","biosampleId"]
+  , "additionalProperties": true
+
+}

@@ -2,9 +2,9 @@
   "openapi": "3.0.2",
   "servers": [],
   "info": {
-    "version": "2.0.0-draft.3",
+    "version": "2.0.0-draft.4",
     "title": "GA4GH Beacon API Specification",
-    "description": "A Beacon is a web service for genetic data sharing that can be queried for  information about variants, individuals, biosamples, and other entities.",
+    "description": "A Beacon is a web service for data discovery and sharing that can be queried for information about entry types defined by a Model.",
     "contact": {
       "email": "beacon@ga4gh.org"
     },
@@ -20,7 +20,7 @@
       ],
       "get": {
         "description": "Get information about the beacon\n",
-        "operationId": "getBeaconInfoRoot",
+        "operationId": "getBeaconRoot",
         "tags": [
           "Informational endpoints"
         ],
@@ -69,7 +69,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-discovery/ga4gh-service-info/develop/service-info.yaml#/components/schemas/Service"
+                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/ga4gh-service-info-1-0-0-schema.json"
                 }
               }
             }

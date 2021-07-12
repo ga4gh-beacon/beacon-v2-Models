@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quantity",
+  "description": "Definition of a quantity class.",
+  "type": "object",
+  "properties": {
+    "unit" : {
+      "description": "The kind of unit. REQUIRED.",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "example": {
+        "id" : "NCIT:C28253",
+        "label" : "Milligram"
+      }
+    },
+    "value" : {
+      "description" : "The value of the quantity in the units. REQUIRED.",
+      "type" : "float"
+    },
+    "referenceRange": {
+      "description": "The normal range for the value.",
+      "$ref": "./referenceRange.json",
+      "example" : {}
+    },
+  },
+  "required": ["unit", "value"],
+  "additionalProperties": true
+}

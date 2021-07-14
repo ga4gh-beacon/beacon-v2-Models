@@ -15,7 +15,6 @@
       "type": "string",
       "example": "pgxind-kftx26aj"
     },
-    },
     "derivedFromId": {
       "description": "id of the biosample from which the current biosample was derived (if applicable)",
       "type": "string",

@@ -130,7 +130,7 @@
       },
       "additionallySupportedSchemas": []
     },
-    "bioSample": {
+    "biosample": {
       "id": "biosample",
       "name": "Biological Sample",
       "ontologyTermForThisType": {

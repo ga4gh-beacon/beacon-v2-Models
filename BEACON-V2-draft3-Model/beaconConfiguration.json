@@ -96,8 +96,8 @@
       },
       "additionallySupportedSchemas": []
     },
-    "variantsInSample": {
-      "id": "variantsInSample",
+    "variantInSample": {
+      "id": "variantInSample",
       "name": "Genomic Variant in a Sample",
       "ontologyTermForThisType": {
         "id": "SO:0001507",
@@ -147,8 +147,8 @@
       },
       "additionallySupportedSchemas": []
     },
-    "runs": {
-      "id": "runs",
+    "run": {
+      "id": "run",
       "name": "Sequencing run",
       "ontologyTermForThisType": {
         "id": "NCIT:C148088",

@@ -6,7 +6,7 @@
   "properties": {
     "typedQuantities": {
       "description": "List of quantities required to fully describe the complex value. REQUIRED.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "#/definitions/TypedQuantity"
       }

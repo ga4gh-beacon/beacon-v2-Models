@@ -15,11 +15,6 @@
       "type": "string",
       "example": "pgxind-kftx26aj"
     },
-    "derivedFromId": {
-      "description": "id of the biosample from which the current biosample was derived (if applicable)",
-      "type": "string",
-      "example": "pgxbs-cqtvb331"
-    },
     "description": {
       "description": "Unstructured text to describe additional properties of this sample.",
       "type": "string",
@@ -43,14 +38,14 @@
     },
     "phenotypicFeatures": {
       "description": "List of phenotypic abnormalities of the sample. RECOMMENDED.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "../common/phenotypicFeature.json"
       }
     },
     "measurements": {
       "description": "List of measurements of the sample.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "../common/measurement.json"
       }
@@ -106,14 +101,14 @@
     },
     "pathologicalTnmFinding": {
       "description": "Pathological TNM findings, if applicable, preferably as subclass of NCIT:C48698 - Cancer TNM Finding Category. RECOMMENDED.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
       }
     },
     "diagnosticMarkers": {
       "description": "Clinically relevant biomarkers. RECOMMENDED.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
       }
@@ -130,7 +125,7 @@
     },
     "files": {
       "description": "List of files related to the biosample, e.g. VCF or high-throughput sequencing files.",
-      "type": "list",
+      "type": "array",
       "items": {
         "$ref": "../common/file.json"
       }
@@ -144,20 +139,17 @@
       }      
     },
     "sampleProcessing": {
-      "description": "Status of how the specimen was processed.",
+      "description": "Status of how the specimen was processed,e.g. a child term of EFO:0009091.",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "example": {
-        "id": "EFO:0009656",
-        "label": "neoplastic sample"
+        "id": "EFO:0009129",
+        "label": "mechanical dissociation"
       }      
     },
     "sampleStorage": {
       "description": "Status of how the specimen was stored.",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id": "EFO:0009656",
-        "label": "neoplastic sample"
-      }      
+      "example": { }      
     },
     "info": {
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"

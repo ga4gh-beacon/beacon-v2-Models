@@ -126,13 +126,13 @@
     },
     "analysis": {
       "entryType": "analysis",
-      "openAPIEndpointsDefinition": "./analysis/endpoints.json",
-      "rootUrl": "https://exampleBeacons.org/analysis",
-      "singleEntryUrl": "https://exampleBeacons.org/analysis/{id}",
+      "openAPIEndpointsDefinition": "./analyses/endpoints.json",
+      "rootUrl": "https://exampleBeacons.org/analyses",
+      "singleEntryUrl": "https://exampleBeacons.org/analyses/{id}",
       "endpoints": {
         "variantInSample": {
           "returnedEntryType": "variantInSample",
-          "url": "https://exampleBeacons.org/analysis/{id}/variants_in_sample"
+          "url": "https://exampleBeacons.org/analyses/{id}/variants_in_sample"
         }        
       }
     },

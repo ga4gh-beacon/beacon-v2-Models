@@ -7,7 +7,7 @@ The GA4GH Beacon specification is composed by two parts:
 * the Beacon Framework
 * the Beacon Models
 
-The **Beacon Framework** (in [Framework repo](https://github.com/ga4gh-beacon/beacon-framework-v2) repo) is the part that describes the overall structure of the API requests, responses, parameters, teh common components, etc. It could also be referred in this document as simply the *Framework*.
+The **Beacon Framework** (in [Framework repo](https://github.com/ga4gh-beacon/beacon-framework-v2)) is the part that describes the overall structure of the API requests, responses, parameters, teh common components, etc. It could also be referred in this document as simply the *Framework*.
 
 **Beacon Models** (in *this* repo) describes the set of concepts included in a Beacon version (e.g. Beacon v2), like *individual* or *biosample*, and also the relationships between them. It could also be referred in this document as simply the *Model*.
 
@@ -23,5 +23,5 @@ The Model repo includes several Models:
 
 1. **The TEMPLATE Model:** is the most basic model. Its purpose is twofold 1) as starting point for any *new* model (so to say, not Beacon v2) and 2) as a learning tool.
 2. **The Beacon v2 draft 4 Model:** The current version of the complete Beacon v2 Model. 
-3. **The Beacon v2 draft 3 Model:** The version of the Model that has been current for a longer time and to which many examples, documents, and pilot implementations still refers. It must be considered as ***deprecated***.
+3. **The Beacon v2 draft 3 Model:** The version of the Model that has been current for a longer time and to which many examples, documents, and pilot implementations still refers. It must be considered as ***deprecated***. It is kept as a reference while the next version is being finished and tested.
 4. **The Beacon v1 Model:** Provided as an example for Beacon v1 implementers that want to update to Beacon v2 but not planning to add any additional entry type to their Beacon.

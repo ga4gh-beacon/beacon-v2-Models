@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/configuration/beaconMapSchema.json",
+  "endpointSets": {
+    "dataset": {
+      "entryType": "dataset",
+      "openAPIEndpointsDefinition": "./datasets/endpoints.json",
+      "rootUrl": "https://exampleBeacons.org/datasets",
+      "endpoints": {
+        "biosample": {
+          "returnedEntryType": "biosample",
+          "url": "https://exampleBeacons.org/datasets/{id}/biosamples"
+        }
+      }
+    },
+    "individual": {
+      "entryType": "individual",
+      "openAPIEndpointsDefinition": "./individuals/endpoints.json",
+      "rootUrl": "https://exampleBeacons.org/individuals",
+      "singleEntryUrl": "https://exampleBeacons.org/individuals/{id}",
+      "endpoints": {
+        "biosample": {
+          "returnedEntryType": "biosample",
+          "url": "https://exampleBeacons.org/individuals/{id}/biosamples"
+        }
+      }    
+    },
+    "biosample": {
+      "entryType": "biosample",
+      "openAPIEndpointsDefinition": "./biosamples/endpoints.json",
+      "rootUrl": "https://exampleBeacons.org/biosamples",
+      "singleEntryUrl": "https://exampleBeacons.org/biosamples/{id}",
+      "endpoints": {
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/configuration/beaconConfigurationSchema.json",
+
+  "maturityAttributes": {
+    "productionStatus": "DEV"
+  },
+  "securityAttributes": {
+    "defaultGranularity": "record",
+    "securityLevels": ["PUBLIC"]
+  },
+  "entryTypes": {
+    "dataset": {
+      "id": "dataset",
+      "name": "Dataset",
+      "ontologyTermForThisType": {
+        "id": "NCIT:C47824",
+        "label": "Data set"
+      },
+      "partOfSpecification": "Beacon v2.0.0-draft.4",
+      "description": "A Dataset is a collection of records, like rows in a database or cards in a cardholder.",
+      "defaultSchema": {
+        "id": "ga4gh-beacon-dataset-v2.0.0-draft.4",
+        "name": "Default schema for datasets",
+        "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
+        "schemaVersion": "v2.0.0-draft.4"
+      },
+      "aCollectionOf": [{ "id": "individual", "name": "Individuals" }],
+      "additionalSupportedSchemas": []
+    },
+    "individual": {
+      "id": "individual",
+      "name": "Individual",
+      "ontologyTermForThisType": {
+        "id": "NCIT:C25190",
+        "label": "Person"
+      },
+      "partOfSpecification": "Beacon v2.0.0-draft.4",
+      "description": "A human being. It could be a Patient, a Tissue Donor, a Participant, a Human Study Subject, etc.",
+      "defaultSchema": {
+        "id": "ga4gh-beacon-individual-v2.0.0-draft.4",
+        "name": "Default schema for an individual",
+        "referenceToSchemaDefinition": "./individuals/defaultSchema.json",
+        "schemaVersion": "v2.0.0-draft.4"
+      },
+      "additionallySupportedSchemas": []
+    },
+    "biosample": {
+      "id": "biosample",
+      "name": "Biological Sample",
+      "ontologyTermForThisType": {
+        "id": "NCIT:C70699",
+        "label": "Biospecimen"
+      },
+      "partOfSpecification": "Beacon v2.0.0-draft.4",
+      "description": "Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products. [ NCI ]",
+      "defaultSchema": {
+        "id": "ga4gh-beacon-biosample-v2.0.0-draft.4",
+        "name": "Default schema for a biological sample",
+        "referenceToSchemaDefinition": "./biosamples/defaultSchema.json",
+        "schemaVersion": "v2.0.0-draft.4"
+      },
+      "additionallySupportedSchemas": []
+    }
+
+  }
+}

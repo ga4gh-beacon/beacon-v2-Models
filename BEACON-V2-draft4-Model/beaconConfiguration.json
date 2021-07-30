@@ -176,7 +176,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-analysis-v2.0.0-draft.4",
         "name": "Default schema for a bioinformatics analysis",
-        "referenceToSchemaDefinition": "./analysis/defaultSchema.json",
+        "referenceToSchemaDefinition": "./analyses/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []

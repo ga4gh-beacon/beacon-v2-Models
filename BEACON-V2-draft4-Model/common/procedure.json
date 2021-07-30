@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Procedure",
+  "description": "Used to describe a phenotype that characterizes the subject or biosample.",
+  "type": "object",
+  "properties": {
+    "code" : {
+      "description" : "Clinical procedure performed. REQUIRED.",
+      "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "example" : {
+        "id" : "NCIT:C28743",
+        "label" : "Punch Biopsy"
+      }
+    },
+    "bodySite" : {
+      "description" : "Specific body site where the procedure was performed.",
+      "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "example" : {
+        "id" : "UBERON:0003403",
+        "label" : "Skin of forearm"
+      }
+    },
+    "performed" : {
+      "description" : "Age or time at which the procedure was performed.",
+      "$ref": "./timeElement.json"
+    }
+  },
+  "required" : ["code"]
+}

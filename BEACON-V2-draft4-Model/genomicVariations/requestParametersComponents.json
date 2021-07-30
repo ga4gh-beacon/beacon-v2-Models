@@ -2,56 +2,25 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "description": "Component definitions used in 'requestParameters.json'.\nThe purpose of this file is to separate components from actual parameters to avoid confusion.\n",
   "definitions": {
-    "Chromosome": {
-      "description": "Reference name (chromosome). Accepting values 1-22, X, Y, MT.\n",
-      "type": "string",
-      "enum": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "X",
-        "Y",
-        "MT"
-      ]
-    },
     "Assembly": {
-      "description": "Assembly identifier (GRC notation, e.g. GRCh37).\n",
+      "description": "Genomic assembly accession and version as RefSqeq assembly accession (e.g. \"GCF_000001405.39\") or a versioned assembly name or synonym such as UCSC Genome Browser assembly (e.g. \"hg38\") or Genome Reference Consortium Human (e.g. \"GRCh38.p13\") names.",
       "type": "string",
-      "example": "GRCh38"
+      "example": ["GCF_000001405.39", "hg38", "GRCh38.p13"]
+    },
+    "RefSeqId": {
+      "description": "Reference sequence id for genomic reference sequence in which variant coordinates are given, e.g. \"NC_000009\" for human chromosome 9. Preferably the RefSeqId, alternatively, names, synonymous or aliases e.g. \"Chr9\" could be used.",
+      "type": "string",
+      "example": ["NC_000009", "Chr9", "NC_012920.1"]
     },
     "ReferenceBases": {
       "description": "Reference bases for this variant (starting from `start`). * Accepted values: [ACGTN]*. * N is a wildcard, that denotes the position of any base, and can be used as a standalone base of any type or within a partially known sequence. As example, a query of `ANNT` the Ns can take take any form of [ACGT] and will match `ANNT`, `ACNT`, `ACCT`, `ACGT` ... and so forth. * an *empty value* is used in the case of insertions with the maximally trimmed, inserted sequence being indicated in `AlternateBases`\n",
       "type": "string",
-      "pattern": "^([ACGTN]*)$"
+      "pattern": "^([ACGTUNRYSWKMBDHV\\-\\.]*)$"
     },
     "AlternateBases": {
       "description": "Alternate bases for this variant (starting from `start`).\n* Accepted values: [ACGTN]*.\n* N is a wildcard, that denotes the position of any base, and can be\nused as a standalone base of any type or within a partially known\nsequence. As example, a query of `ANNT` the Ns can take take any form of\n[ACGT] and will match `ANNT`, `ACNT`, `ACCT`, `ACGT` ... and so forth.\n* an *empty value* is used in the case of deletions with the maximally\ntrimmed, deleted sequence being indicated in `ReferenceBases`\n* Categorical variant queries, e.g. such *not* being represented through\nsequence & position, make use of the `variantType` parameter.\n* either `alternateBases` or `variantType` is required.\n",
       "type": "string",
-      "pattern": "^([ACGTN]*)$"
-    },
-    "RefSeqId": {
-      "description": "Reference sequence Refseq ID and version for genomic reference sequence in which\nvariant coordinates are given, e.g. \"NC 000009\" for human chromosome 9.\nAlternatively, names, synonymous or aliases e.g. \"Chr9\" when\nassemblyId is given. For organisms with a single reference sequence covering the genome,\nthe versioned Refseq ID can be given here as an alternative to the assembly ID and\nversion in assemblyId, e.g. \"NC 045512.2\" for SARS-CoV2 full-length genome reference sequence.\n",
-      "type": "string",
-      "example": ["NC 000009", "Chr9", "NC 045512.2"]
+      "pattern": "^([ACGTUNRYSWKMBDHV\\-\\.]*)$"
     }
   }
 }

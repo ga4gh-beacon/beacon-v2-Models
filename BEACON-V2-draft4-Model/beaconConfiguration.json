@@ -62,57 +62,6 @@
       },
       "additionallySupportedSchemas": []
     },
-    "variantAnnotation": {
-      "id": "variantAnnotation",
-      "name": "Genomic Variant Annotation",
-      "ontologyTermForThisType": {
-        "id": "SO:0000110",
-        "label": "sequence_feature"
-      },
-      "partOfSpecification": "Beacon v2.0.0-draft.4",
-      "description": "Any extent of continuous biological sequence.",
-      "defaultSchema": {
-        "id": "ga4gh-beacon-variant-annotation-v2.0.0-draft.4",
-        "name": "Default schema for variant annotations",
-        "referenceToSchemaDefinition": "./variantAnnotations/defaultSchema.json",
-        "schemaVersion": "v2.0.0-draft.4"
-      },
-      "additionallySupportedSchemas": []
-    },
-    "variantInterpretation": {
-      "id": "variantInterpretation",
-      "name": "Genomic Variant Interpretation",
-      "ontologyTermForThisType": {
-        "id": "SO:0000400",
-        "label": "sequence_attribute"
-      },
-      "partOfSpecification": "Beacon v2.0.0-draft.4",
-      "description": "An attribute describes a quality of sequence  .",
-      "defaultSchema": {
-        "id": "ga4gh-beacon-variant-interpretation-v2.0.0-draft.4",
-        "name": "Default schema for variant Interpretations",
-        "referenceToSchemaDefinition": "./variantInterpretations/defaultSchema.json",
-        "schemaVersion": "v2.0.0-draft.4"
-      },
-      "additionallySupportedSchemas": []
-    },
-    "variantsInSample": {
-      "id": "variantsInSample",
-      "name": "Genomic Variant in a Sample",
-      "ontologyTermForThisType": {
-        "id": "SO:0001507",
-        "label": "variant_collection"
-      },
-      "partOfSpecification": "Beacon v2.0.0-draft.4",
-      "description": "A collection of one or more sequences of an individual.",
-      "defaultSchema": {
-        "id": "ga4gh-beacon-variant-in-sample-v2.0.0-draft.4",
-        "name": "Default schema for variant in sample",
-        "referenceToSchemaDefinition": "./variantsInSample/defaultSchema.json",
-        "schemaVersion": "v2.0.0-draft.4"
-      },
-      "additionallySupportedSchemas": []
-    },
     "individual": {
       "id": "individual",
       "name": "Individual",
@@ -130,7 +79,7 @@
       },
       "additionallySupportedSchemas": []
     },
-    "bioSample": {
+    "biosample": {
       "id": "biosample",
       "name": "Biological Sample",
       "ontologyTermForThisType": {
@@ -176,26 +125,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-analysis-v2.0.0-draft.4",
         "name": "Default schema for a bioinformatics analysis",
-        "referenceToSchemaDefinition": "./analysis/defaultSchema.json",
-        "schemaVersion": "v2.0.0-draft.4"
-      },
-      "additionallySupportedSchemas": []
-    },
-    "interactor": {
-      "id": "interactor",
-      "name": "Interactor",
-      "ontologyTermForThisType": {
-        "$comment": "TO REVIEW: No ontology term has been found to describe this entry type. Specific relationship are defined, e.g. Host-parasite (NCIT:C16697), but none found so far that is as generic as described below.",
-        "id": "NCIT:C14376",
-        "label": "Other Organism Groupings",
-        "comment": "A non-taxonomic grouping of organisms based on a shared characteristic. [ NCI ]"
-      },
-      "partOfSpecification": "Beacon v2.0.0-draft.4",
-      "description": "An organism that is having an interaction with the individual, could be a parasite, an infectious agent or similar.",
-      "defaultSchema": {
-        "id": "ga4gh-beacon-interactor-v2.0.0-draft.4",
-        "name": "Default schema for an interactor",
-        "referenceToSchemaDefinition": "./interactors/defaultSchema.json",
+        "referenceToSchemaDefinition": "./analyses/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []

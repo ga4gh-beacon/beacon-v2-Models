@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "Sequencing run",
+  "title": "Variant in Sample",
   "$comment": "version: ga4gh-beacon-biosample-v2.0.0-draft.4",
-  "description": "Schema for a sequencing run.",
+  "description": "Schema for a variant observed in a sample.",
   "type":"object",
   "properties": {
     "variantId": {

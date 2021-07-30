@@ -1,2 +1,7 @@
-
 .DS_Store
+TEMPLATE-Model copy/
+BEACON-V2-draft4-Model/genomicVariations/annotationDictionary.jsonc
+.gitignore
+BEACON-V2-draft4-Model/genomicVariations/openCGAexample.json
+BEACON-V2-draft4-Model/genomicVariations/defaultSchema-v2.json
+BEACON-V2-draft4-Model/genomicVariations/defaultSchema-v3-minimal.json

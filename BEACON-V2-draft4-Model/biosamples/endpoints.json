@@ -252,7 +252,7 @@
         }
       }
     },
-    "/biosamples/{id}/analysis": {
+    "/biosamples/{id}/analyses": {
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },

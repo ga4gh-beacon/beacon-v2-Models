@@ -1,160 +1,83 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "biosample",
-  "$comment": "version: ga4gh-beacon-biosample-v2.0.0-draft.4",
+  "$comment": "version: ga4gh-beacon-biosample-v2.0.0-draft.3",
   "description": "Schema for an biosample entry.",
   "type":"object",
   "properties": {
-    "id": {
+    "biosampleId": {
       "description": "Biosample identifier (external accession or internal ID).",
       "type": "string",
-      "example": "pgxbs-kftva634"
+      "example": "S0001"
     },
     "individualId": {
       "description": "Reference to individual ID (Individual.individualId).",
       "type": "string",
-      "example": "pgxind-kftx26aj"
+      "example": "P0001"
     },
     "description": {
-      "description": "Unstructured text to describe additional properties of this sample.",
+      "description": "Any relevant info about the biosample that does not fit into any other field in the schema.",
       "type": "string",
       "example": "Some free text"
     },
-    "sampledTissue": {
-      "description": "Tissue from which the sample was taken",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "UBERON:0000474",
-        "label" : "female reproductive system"
-      }
+    "biosampleStatus": {
+      "description": "Ontology value from Experimental Factor Ontology (EFO) Material Sample ontology (OBI:0000747). Classification of the sample in abnormal sample (EFO:0009655) or reference sample (EFO:0009654).",
+      "type": "string",
+      "enum": [
+        "EFO:0009655",
+        "EFO:0009654"
+      ],
+      "example": "EFO:0009655"
     },
-    "sampledType": {
-      "description": "Class for the type of material, e.g., RNA, DNA, cultured cells.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "EFO:0008479",
-        "label" : "genomic DNA"
-      }
+    "collectionDate": {
+      "description": "Date of biosample collection in the ISO8601 duration format `P[n]Y[n]M[n]DT[n]H[n]M[n]S`.",
+      "type": "string",
+      "example": "P32Y6M1D"
     },
-    "phenotypicFeatures": {
-      "description": "List of phenotypic abnormalities of the sample. RECOMMENDED.",
-      "type": "array",
-      "items": {
-        "$ref": "../common/phenotypicFeature.json"
-      }
+    "individualAgeAtCollection": {
+      "description": "Individual's age at the time of sample collection in the ISO8601 duration format `P[n]Y[n]M[n]DT[n]H[n]M[n]S`.",
+      "type": "string",
+      "example": "P32Y6M1D"
     },
-    "measurements": {
-      "description": "List of measurements of the sample.",
-      "type": "array",
-      "items": {
-        "$ref": "../common/measurement.json"
-      }
+    "sampleOriginType": {
+      "description": "Category of sample origin. Value from Ontology for Biomedical Investigations (OBI)material entity (BFO:0000040) ontology, e.g. \"specimen from organism\" (OBI:0001479),\"xenograft\" (OBI:0100058), \"cell culture\" (OBI:0001876), \"cell specimen\" (OBI:0001468),\"environmental swab specimen\" (OBI:0002613).",
+      "type": "string"
     },
-    "taxonomy": {
-      "description": "Species of the sampled individual.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCBITaxon:9606",
-        "label" : "Homo sapiens"
-      }
+    "sampleOriginDetail": {
+      "description": "Specific instance of sample origin matching the category set in sampleOriginType.Value from Uber-anatomy ontology (UBERON) or BRENDA tissue / enzyme source (BTO),Ontology for Biomedical Investigations (OBI) or Cell Line Ontology (CLO), e.g. \"cerebellar vermis\" (UBERON:0004720), \"HEK-293T cell\" (BTO:0002181), \"nasopharyngeal swab specimen\" (OBI:0002606), \"cerebrospinal fluid specimen\" (OBI:0002502).",
+      "type": "string"
     },
-    "timeOfCollection": {
-      "description": "Time element providing information about the absolute or relative time of the sample collection.",
-      "$ref": "../common/timeElement.json",
-      "example" : {
-        "age": {
-          "iso8601duration": "P53Y8M"
-        }
-      }
+    "obtentionProcedure": {
+      "description": "Ontology value from NCIT Intervention or Procedure ontology describing the procedure for sample obtention, e.g. NCIT:C15189 (biopsy).",
+      "type": "string",
+      "example": "NCIT:C15189"
     },
-    "histologicalDiagnosis": {
-      "description": "Disease diagnosis that was inferred from the histological examination. RECOMMENDED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C3778",
-        "label" : "Serous Cystadenocarcinoma"
-      }      
-    },
-    "tumorProgression": {
-      "description": "Indicates primary, metastatic, recurrent. RECOMMENDED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C4813",
-        "label" : "Recurrent Malignant Neoplasm"
-      }      
-    },
-    "tumorGrade": {
-      "description": "Term representing the tumor grade. Child term of NCIT:C28076 (Disease Grade Qualifier) or equivalent.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C28080",
-        "label" : "Grade 3a"
-      }      
-    },
-    "pathologicalStage": {
-      "description": "Pathological stage, if applicable, preferably as subclass of NCIT:C28108 - Disease Stage Qualifier. RECOMMENDED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C27977",
-        "label" : "Stage IIIA"
-      }      
-    },
-    "pathologicalTnmFinding": {
-      "description": "Pathological TNM findings, if applicable, preferably as subclass of NCIT:C48698 - Cancer TNM Finding Category. RECOMMENDED.",
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
-      }
-    },
-    "diagnosticMarkers": {
-      "description": "Clinically relevant biomarkers. RECOMMENDED.",
-      "type": "array",
-      "items": {
-        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
-      }
-    },
-    "procedure": {
-      "description": "The procedure used to extract the biosample. RECOMMENDED.",
-      "$ref": "../common/procedure.json",
-      "example": {
-        "code": {
-          "id": "NCIT:C5189",
-          "label": "Radical Cystoprostatectomy"
-        }
-      }      
-    },
-    "files": {
-      "description": "List of files related to the biosample, e.g. VCF or high-throughput sequencing files.",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "materialSample": {
-      "description": "Status of specimen (tumor tissue, normal control, etc.). RECOMMENDED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id": "EFO:0009656",
-        "label": "neoplastic sample"
-      }      
-    },
-    "sampleProcessing": {
-      "description": "Status of how the specimen was processed,e.g. a child term of EFO:0009091.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id": "EFO:0009129",
-        "label": "mechanical dissociation"
-      }      
-    },
-    "sampleStorage": {
-      "description": "Status of how the specimen was stored.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": { }      
+    "cancerFeatures": {
+      "$ref": "#/definitions/CancerFeature"
     },
     "info": {
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"
     }
   },
-  "required": ["id", "biosampleStatus","sampleOriginType"],
-  "additionalProperties": true
+
+  "definitions": {
+    "CancerFeature": {
+      "description": "Values specifying cancer-specific features, including progression and tumor grade.",
+      "type": "object",
+      "properties": {
+        "tumorProgression": {
+          "description": "Ontology value from Neoplasm by Special Category ontology (NCIT:C7062). Tumor progression category indicating primary, metastatic or recurrent progression, e.g. NCIT:C84509 (Primary Malignant Neoplasm).",
+          "type": "string",
+          "example": "NCIT:C84509"
+        },
+        "tumorGrade": {
+          "description": "Ontology value from Tumor Grading Characteristic ontology (Mondo Disease Ontology MONDO:0024488) General tumor grading.",
+          "type": "string",
+          "example": "MONDO:0024492"
+        }
+      }
+    }
+  }
+  , "required": ["biosampleId", "biosampleStatus","sampleOriginType"]
+  , "additionalProperties": true
 }

@@ -127,7 +127,7 @@
       "description": "List of files related to the biosample, e.g. VCF or high-throughput sequencing files.",
       "type": "array",
       "items": {
-        "$ref": "../common/file.json"
+        "type": "string"
       }
     },
     "materialSample": {

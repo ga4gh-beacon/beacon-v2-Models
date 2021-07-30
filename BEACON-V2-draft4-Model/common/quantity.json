@@ -14,13 +14,13 @@
     },
     "value" : {
       "description" : "The value of the quantity in the units. REQUIRED.",
-      "type" : "float"
+      "type" : "number"
     },
     "referenceRange": {
       "description": "The normal range for the value.",
       "$ref": "./referenceRange.json",
       "example" : {}
-    },
+    }
   },
   "required": ["unit", "value"],
   "additionalProperties": true

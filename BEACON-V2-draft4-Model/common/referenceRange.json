@@ -14,11 +14,11 @@
     },
     "low" : {
       "description" : "Lower range end of normal. REQUIRED.",
-      "type" : "float"
+      "type" : "number"
     },
     "high" : {
       "description" : "Upper range end of normal. REQUIRED.",
-      "type" : "float"
+      "type" : "number"
     }
   },
   "required": ["low", "high"],

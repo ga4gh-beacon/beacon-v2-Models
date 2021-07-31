@@ -4,26 +4,21 @@
   "description": "Used to describe a phenotype that characterizes the subject or biosample.",
   "type": "object",
   "properties": {
-    "description": {
-      "description": "Unstructured text to describe additional properties of this phenotypic feature.",
-      "type": "string",
-      "example": "Some free text"
-    },
-    "featureType" : {
-      "description" : "Term denoting the phenotypic feature. Preferably a value from Human Phenotype Ontology (HPO). REQUIRED.",
-      "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+    "featureType": {
+      "description": "Term denoting the phenotypic feature. Preferably a value from Human Phenotype Ontology (HPO). REQUIRED.",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "examples": [
         { "id": "HP:0000002", "label": "Abnormality of body height" },
         { "id": "HP:0002006", "label": "Facial cleft" },
-        { "id" : "HP:0012469", "label" : "Infantile spasms" }
-       ]
+        { "id": "HP:0012469", "label": "Infantile spasms" }
+      ]
     },
     "excluded": {
       "description": "(from Phenopackets v.2) Flag to indicate whether the disease was observed or not. Default is ‘false’, in other words the disease was observed. Therefore it is only required in cases to indicate that the disease was looked for, but found to be absent. More formally, this modifier indicates the logical negation of the OntologyClass used in the 'featureType' field. CAUTION It is imperative to check this field for correct interpretation of the disease!",
-      "type" : "boolean",
-      "default" : false
+      "type": "boolean",
+      "default": false
     },
-    "modifiers" : {
+    "modifiers": {
       "description": "For instance one or more terms from HPO Clinical Modifier (HP:0012823). This subontology is designed to provide terms to characterize and specify the phenotypic abnormalities defined in the Phenotypic abnormality subontology, with respect to severity, laterality, age of onset, and other aspects. [ HPO:probinson ] ",
       "type": "array",
       "items": {
@@ -34,34 +29,27 @@
         { "id": "HP:4000053", "label": "Displaced fracture" }
       ]
     },
-    "onset" : {
-      "description" : "Age or time at which the feature was first observed.",
+    "onset": {
+      "description": "Age or time at which the feature was first observed.",
       "$ref": "./timeElement.json"
     },
-    "resolution" : {
-      "description" : "Age or time at which the feature resolved or abated.",
+    "resolution": {
+      "description": "Age or time at which the feature resolved or abated.",
       "$ref": "./timeElement.json"
     },
-    "evidence" : {
-      "description" : "The evidence for an assertion of the observation of a type. RECOMMENDED.",
+    "evidence": {
+      "description": "The evidence for an assertion of the observation of a type. RECOMMENDED.",
       "$ref": "./evidence.json"
     },
     "severityLevel": {
-      "$ref": "#/definitions/SeverityLevel"
+      "$ref": "./commonDefinitions.json#/definitions/SeverityLevel"
+    },
+    "notes": {
+      "description": "Unstructured text to describe additional properties of this phenotypic feature.",
+      "type": "string",
+      "example": "Some free text"
     }
   },
-  "definitions": {
-    "SeverityLevel": {
-      "description": "Level/severity ontology when and as applicable to phenotype observed. Value from Human Phenotype Ontology (HP:0012824), e.g \"mild\". The intensity or degree of a manifestation. [ HPO:probinson ] ",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "HP:0012825", "label": "Severe" },
-        { "id": "HP:0012829", "label": "Profound" },
-        { "id": "HP:0012826", "label": "Moderate" },
-        { "id": "HP:0012825", "label": "Mild" },
-        { "id": "HP:0012827", "label": "Bordeline" }
-      ]
-    }
-  },
-  "required" : ["featureType"]
+  "definitions": {},
+  "required": ["featureType"]
 }

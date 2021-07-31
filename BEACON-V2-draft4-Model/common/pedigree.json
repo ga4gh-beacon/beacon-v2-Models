@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pedigree",
+  "description": "Pedigree studies in which the individual is part of.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Pedigree identifier.",
+      "type": "string",
+      "example": "Pedigree1001"
+    },
+    "disease": {
+      "$ref": "../common/disease.json"
+    },
+    "role": {
+      "description": "Pedigree role, defined as relationship to proband. Value from Family Member term (NCIT:C41256), e.g. \"proband\" (NCIT:C64435),\"identical twin\" (NCIT:C73429), \"mother\" (NCIT:C25189).",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "examples": [
+        { "id": "NCIT:C64435", "label": "Proband" },
+        { "id": "NCIT:C96580", "label": "Biological Mother" },
+        { "id": "NCIT:C96572", "label": "Biological Father" },
+        { "id": "NCIT:C165848", "label": "Identical Twin Brother" }
+      ]
+    },
+    "affected": {
+      "description": "Affected status of Individual in disease of pedigree.",
+      "type": "boolean"
+    },
+    "numSubjects": {
+      "description": "Total number of subjects in pedigree.",
+      "type": "integer",
+      "example": 10
+    }
+  },
+  "required": ["id", "role", "affected"],
+  "additionalProperties": true
+}

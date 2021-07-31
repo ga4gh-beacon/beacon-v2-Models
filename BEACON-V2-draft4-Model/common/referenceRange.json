@@ -4,21 +4,20 @@
   "description": "Definition of a range class.",
   "type": "object",
   "properties": {
-    "unit" : {
-      "description": "The kind of unit. REQUIRED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C28253",
-        "label" : "Milligram"
-      }
+    "units" : {
+      "description": "The kind of unit. RECOMMENDED.",
+      "$ref": "./units.json",
+      "examples": [{ "id": "NCIT:C49670", "label": "Millimeter of Mercury" }]
     },
     "low" : {
       "description" : "Lower range end of normal. REQUIRED.",
-      "type" : "number"
+      "type" : "number",
+      "examples": [85]
     },
     "high" : {
       "description" : "Upper range end of normal. REQUIRED.",
-      "type" : "number"
+      "type" : "number",
+      "examples": [135]
     }
   },
   "required": ["low", "high"],

@@ -14,7 +14,7 @@
       "type": "string",
       "example": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8155688/"
     },
-    "description" : {
+    "notes" : {
       "description": "An optional text descriptor.",
       "type": "string",
       "example": "Signatures of Discriminative Copy Number Aberrations in 31 Cancer Subtypes"

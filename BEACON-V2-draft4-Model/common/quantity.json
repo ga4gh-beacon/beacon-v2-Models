@@ -4,17 +4,17 @@
   "description": "Definition of a quantity class.",
   "type": "object",
   "properties": {
-    "unit" : {
-      "$ref": "./units.json"
+    "units": {
+      "$ref": "./commonDefinitions.json#/definitions/Units"
     },
-    "value" : {
-      "description" : "The value of the quantity in the units. REQUIRED.",
-      "type" : "number"
+    "value": {
+      "description": "The value of the quantity in the units. REQUIRED.",
+      "type": "number"
     },
     "referenceRange": {
       "description": "The normal range for the value.",
       "$ref": "./referenceRange.json",
-      "example" : {}
+      "example": {}
     }
   },
   "required": ["unit", "value"],

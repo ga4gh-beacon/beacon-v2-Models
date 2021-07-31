@@ -4,19 +4,19 @@
   "description": "Definition of a range class.",
   "type": "object",
   "properties": {
-    "units" : {
+    "units": {
       "description": "The kind of unit. RECOMMENDED.",
-      "$ref": "./units.json",
+      "$ref": "./commonDefinitions.json#/definitions/Units",
       "examples": [{ "id": "NCIT:C49670", "label": "Millimeter of Mercury" }]
     },
-    "low" : {
-      "description" : "Lower range end of normal. REQUIRED.",
-      "type" : "number",
+    "low": {
+      "description": "Lower range end of normal. REQUIRED.",
+      "type": "number",
       "examples": [85]
     },
-    "high" : {
-      "description" : "Upper range end of normal. REQUIRED.",
-      "type" : "number",
+    "high": {
+      "description": "Upper range end of normal. REQUIRED.",
+      "type": "number",
       "examples": [135]
     }
   },

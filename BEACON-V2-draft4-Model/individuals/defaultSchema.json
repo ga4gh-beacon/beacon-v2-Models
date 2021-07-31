@@ -12,77 +12,57 @@
     },
     "sex": {
       "description": "Sex of the individual. Value from NCIT General Qualifier (NCIT:C27993): 'unknown' (not assessed or not available) (NCIT:C17998), 'female' (NCIT:C16576), or 'male', (NCIT:C20197).",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "NCIT:C16576", "label": "female" },
-        { "id": "NCIT:C20197", "label": "male" },
-        { "id": "NCIT:C1799", "label": "unknown" }
-      ]
+      "$ref": "../common/commonDefinitions.json#/definitions/Gender"
     },
     "ethnicity": {
       "description": "Ethnic background of the individual. Value from NCIT Race (NCIT:C17049) ontology term descendants, e.g. NCIT:C126531 (Latin American). A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent. [ NCI ] ",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "NCIT:C42331", "label": "African" },
-        { "id": "NCIT:C41260", "label": "Asian" },
-        { "id": "NCIT:C126535", "label": "Australian" },
-        { "id": "NCIT:C43851", "label": "European" },
-        { "id": "NCIT:C77812", "label": "North American" },
-        { "id": "NCIT:C126531", "label": "Latin American" },
-        { "id": "NCIT:C104495", "label": "Other race" }
-      ]
+      "$ref": "../common/commonDefinitions.json#/definitions/Ethnicity"
     },
     "geographicOrigin": {
       "description": "Individual's country or region of origin (birthplace or residence place regardless of ethnic origin). Value from GAZ Geographic Location ontology (GAZ:00000448), e.g. GAZ:00002459 (United States of America).",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "GAZ:00002955", "label": "Slovenia" },
-        { "id": "GAZ:00002459", "label": "United States of America" },
-        { "id": "GAZ:00316959", "label": "Municipality of El Masnou" },
-        { "id": "GAZ:00000460", "label": "Eurasia" }
-      ]
+      "$ref": "../common/commonDefinitions.json#/definitions/GeographicLocation"
     },
     "diseases": {
       "description": "List of disease(s) been diagnosed to the individual, defined by disease ontology ID(s), age of onset, stage and the presence of family history.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Disease"
+        "$ref": "../common/disease.json"
       }
     },
     "pedigrees": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Pedigree"
+        "$ref": "../common/pedigree.json"
       }
     },
     "phenotypicFeatures": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/PhenotypicFeature"
+        "$ref": "../common/phenotypicFeature.json"
       }
     },
     "treatments": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Treatment"
+        "$ref": "../common/treatment.json"
       }
     },
-    "interventions": {
+    "interventionsOrProcedures": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Intervention"
+        "$ref": "../common/procedure.json"
       }
     },
     "measures": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Measure"
+        "$ref": "../common/measurement.json"
       }
     },
     "exposures": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Exposure"
+        "$ref": "../common/exposure.json"
       }
     },
     "info": {
@@ -92,212 +72,11 @@
   "required": ["id", "sex"],
 
   "definitions": {
-    "Age": {
-      "description": "Definition of individual's age at, e.g., onset, at sample collection time or at diagnosis of disease.",
-      "type": "object",
-      "properties": {
-        "age": {
-          "description": "Value indicating the age in the ISO8601 duration format `P[n]Y[n]M[n]DT[n]H[n]M[n]S`.",
-          "type": "string",
-          "example": "P32Y6M1D"
-        },
-        "ageGroup": {
-          "description": "Age group value. Recommended from NCIT Age Group ontology term (NCIT:C20587) descendants.",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "NCIT:C27954", "label": "Adolescent" },
-            { "id": "NCIT:C49685", "label": "Adult 18-65 Years Old" }
-          ]
-        }
-      }
-    },
-    "SeverityLevel": {
-      "description": "Level/severity ontology when and as applicable to phenotype observed. Value from Human Phenotype Ontology (HP:0012824), e.g \"mild\". The intensity or degree of a manifestation. [ HPO:probinson ] ",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "HP:0012825", "label": "Severe" },
-        { "id": "HP:0012829", "label": "Profound" },
-        { "id": "HP:0012826", "label": "Moderate" },
-        { "id": "HP:0012825", "label": "Mild" },
-        { "id": "HP:0012827", "label": "Bordeline" }
-      ]
-    },
-    "Disease": {
-      "description": "Lisf of diseases diagnosed to the individual, defined by diseaseID, age of onset, stage, level of severity, outcome and the presence of family history.",
-      "type": "object",
-      "properties": {
-        "diseaseId": {
-          "description": "Disease identifier. Value from disease ontologies such as HPO, OMIM, Orphanet, MONDO, e.g. lactose intolerance (HP:0004789, ICD10CM:E73).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "HP:0004789", "label": "lactose intolerance" },
-            { "id": "ICD10CM:E73", "label": "lactose intolerance" },
-            { "id": "OMIM:164400", "label": "Spinocerebellar ataxia 1" }
-          ]
-        },
-        "ageOfOnset": {
-          "$ref": "#/definitions/Age"
-        },
-        "stage": {
-          "description": "Ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "OGMS:0000119", "label": "acute onset" },
-            { "id": "OGMS:0000117", "label": "asymptomatic" },
-            { "id": "OGMS:0000106", "label": "remission" }
-          ]
-        },
-        "severityLevel": {
-          "$ref": "#/definitions/SeverityLevel"
-        },
-        "familyHistory": {
-          "description": "Boolean indicating determined or self-reported presence of family history of the disease.",
-          "type": "boolean",
-          "example": true
-        }
-      },
-      "required": ["diseaseId"]
-    },
-    "Treatment": {
-      "description": "List of treatment(s) been prescribed/administered, defined by treatment ID, date and age of onset, dose, schedule and duration.",
-      "type": "object",
-      "properties": {
-        "treatmentId": {
-          "description": "Treatment internal id.",
-          "type": "string",
-          "example": "TT001"
-        },
-        "treatmentRoute": {
-          "description": "Route of treatment. Value from NCIT Route of Administration tree (NCIT:C38114).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "NCIT:C38304", "label": "Topical" },
-            { "id": "NCIT:C78373", "label": "Dietary" }
-          ]
-        },
-        "ageAtOnset": {
-          "$ref": "#/definitions/Age"
-        },
-        "dose": {
-          "description": "Treatment dose",
-          "type": "number"
-        },
-        "units": {
-          "description": "Treatment dose units",
-          "type": "string"
-        },
-        "schedule": {
-          "description": "Treatment dose units",
-          "type": "string"
-        },
-        "duration": {
-          "description": "Treatment duration in ISO8601 duration format",
-          "type": "string",
-          "example": "P32Y6M1D"
-        }
-      }
-    },
-    "Intervention": {
-      "description": "List of intervention(s) been practiced on subject, defined by intervention ID, date and age.",
-      "type": "object",
-      "properties": {
-        "interventionId": {
-          "description": "Intervention ID. Recommended valuee from Medical Action Ontology (MAXO)'Medical action' term tree (MAXO:0000001).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "MAXO:0001175", "label": "liver transplantation" },
-            { "id": "MAXO:0000136", "label": "high-resolution microendoscopy" }
-          ]
-        },
-        "date": {
-          "description": "Date of intervention, in ISO8601 format",
-          "type": "string",
-          "format": "date",
-          "example": "2010-07-10"
-        },
-        "ageAtIntervention": {
-          "$ref": "#/definitions/Age"
-        }
-      }
-    },
-    "Pedigree": {
-      "description": "Pedigree studies in which the individual is part of.",
-      "type": "object",
-      "properties": {
-        "pedigreeID": {
-          "description": "Pedigree identifier.",
-          "type": "string",
-          "example": "Pedigree1001"
-        },
-        "pedigreeDisease": {
-          "description": "Disease identifier. Value from disease ontologies such as HPO, OMIM, Orphanet, MONDO, e.g. lactose intolerance (HP:0004789, ICD10CM:E73).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "HP:0004789", "label": "lactose intolerance" },
-            { "id": "ICD10CM:E73", "label": "lactose intolerance" },
-            { "id": "OMIM:164400", "label": "Spinocerebellar ataxia 1" }
-          ]
-        },
-        "pedigreeRole": {
-          "description": "Pedigree role, defined as relationship to proband. Value from Family Member term (NCIT:C41256), e.g. \"proband\" (NCIT:C64435),\"identical twin\" (NCIT:C73429), \"mother\" (NCIT:C25189).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "NCIT:C64435", "label": "Proband" },
-            { "id": "NCIT:C96580", "label": "Biological Mother" },
-            { "id": "NCIT:C96572", "label": "Biological Father" },
-            { "id": "NCIT:C165848", "label": "Identical Twin Brother" }
-          ]
-        },
-        "affected": {
-          "description": "Affected status of Individual in disease of pedigree.",
-          "type": "boolean"
-        },
-        "numSubjects": {
-          "description": "Total number of subjects in pedigree.",
-          "type": "integer",
-          "example": 10
-        }
-      }
-    },
-    "PhenotypicFeature": {
-      "description": "List of phenotypic feature(s) observed in the individual, defined by phenotype, age of onset and severity. ",
-      "type": "object",
-      "properties": {
-        "phenotypeId": {
-          "description": "Phenotypic feature observed. Value from Human Phenotype Ontology (HPO).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "HP:0000002", "label": "Abnormality of body height" },
-            { "id": "HP:0002006", "label": "Facial cleft" }
-          ]
-        },
-        "dateOfOnset": {
-          "description": "Date of onset/observation of phenotype, in ISO8601 format",
-          "type": "string",
-          "format": "date",
-          "example": "2010-07-10"
-        },
-        "onsetType": {
-          "description": "Onset type. Value from HPO Onset tree (HP:0003674), e.g. \"congenital onset\" (HP:0003577), \"adult onset\" (HP:0003581).",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "HP:0003584", "label": "Late onset" },
-            { "id": "HP:0011463", "label": "Childhood onset" }
-          ]
-        },
-        "ageOfOnset": {
-          "$ref": "#/definitions/Age"
-        },
-        "severityLevel": {
-          "$ref": "#/definitions/SeverityLevel"
-        }
-      }
-    },
     "Measure": {
       "description": "Measures(s) been taken from Individual, defined by measure ID, date and/or age at measure ment, unit and value.",
       "type": "object",
       "properties": {
-        "measureId": {
+        "code": {
           "description": "Measure ID. Value from Clinical Measurement ontology (CMO).",
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
           "examples": [
@@ -322,46 +101,7 @@
           "format": "date"
         },
         "ageAtMeasure": {
-          "$ref": "#/definitions/Age"
-        }
-      }
-    },
-    "Exposure": {
-      "description": "Exposures (lifestyle, behavioural exposures) occurred to individual,defined by exposure ID, date and age of onset, dose, and duration.",
-      "type": "object",
-      "properties": {
-        "exposureID": {
-          "description": "Exposure ID. Value from Environment Exposure Ontology.",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "CHEBI:46661", "label": "asbestos" },
-            { "id": "ENVO:21001217", "label": "X-ray radiation" }
-          ]
-        },
-        "value": {
-          "description": "Quantification of the exposure.",
-          "type": "number"
-        },
-        "units": {
-          "description": "Units of the exposure. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants.",
-          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-          "examples": [
-            { "id": "NCIT:C70575", "label": "Roentgen" },
-            { "id": "NCIT:C28252", "label": "Kilogram" }
-          ]
-        },
-        "duration": {
-          "description": "Exposure duration in ISO8601 format",
-          "type": "string",
-          "example": "P32Y6M1D"
-        },
-        "date": {
-          "description": "Date of the exposure in ISO8601 format.",
-          "type": "string",
-          "format": "date"
-        },
-        "ageAtExposure": {
-          "$ref": "#/definitions/Age"
+          "$ref": "../common/age.json"
         }
       }
     }

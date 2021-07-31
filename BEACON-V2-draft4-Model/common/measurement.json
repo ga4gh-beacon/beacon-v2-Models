@@ -4,7 +4,7 @@
   "description": "Definition of a measurement class.",
   "type": "object",
   "properties": {
-    "description": {
+    "notes": {
       "description": "Unstructured text to describe this measurement.",
       "type": "string",
       "example": "Some free text"
@@ -24,8 +24,8 @@
         { "$ref" : "./complexValue.json" }
       ]
     },
-    "timeObserved": {
-      "description": "Time at which measurement was performed. RECOMMENDED.",
+    "observationMoment": {
+      "description": "Moment in time at which measurement was performed. RECOMMENDED.",
       "$ref": "./timeElement.json",
       "example" : {
         "age": {
@@ -34,7 +34,7 @@
       }
     },
     "procedure": {
-      "description": "Clinical procdure performed to acquire the sample used for the measurement.",
+      "description": "Clinical procedure performed to acquire the sample used for the measurement.",
       "$ref": "./procedure.json",
       "example": {
         "code": {

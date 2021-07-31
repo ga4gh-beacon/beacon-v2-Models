@@ -5,12 +5,7 @@
   "type": "object",
   "properties": {
     "unit" : {
-      "description": "The kind of unit. REQUIRED.",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "example": {
-        "id" : "NCIT:C28253",
-        "label" : "Milligram"
-      }
+      "$ref": "./units.json"
     },
     "value" : {
       "description" : "The value of the quantity in the units. REQUIRED.",

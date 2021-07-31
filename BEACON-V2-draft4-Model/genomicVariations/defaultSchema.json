@@ -276,7 +276,7 @@
             "Children"
           ]
         },
-        "AF": {
+        "alleleFrequency": {
           "type": "number",
           "description": "Allele frequency between 0 and 1.",
           "examples": [0.00003186]

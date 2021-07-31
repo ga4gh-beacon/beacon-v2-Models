@@ -49,9 +49,9 @@
       "id": "genomicVariant",
       "name": "Genomic Variants",
       "ontologyTermForThisType": {
-         "id": "SO:0000735",
-        "label": "sequence_location"
-      },
+        "id": "ENSGLOSSARY:0000092",
+       "label": "Variant"
+     },
       "partOfSpecification": "Beacon v2.0.0-draft.4",
       "description": "The location of a sequence.",
       "defaultSchema": {

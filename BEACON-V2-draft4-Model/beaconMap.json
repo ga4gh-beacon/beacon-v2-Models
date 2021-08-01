@@ -62,10 +62,6 @@
           "returnedEntryType": "genomicVariant",
           "url": "https://exampleBeacons.org/individuals/{id}/g_variants"
         },
-        "variantInSample": {
-          "returnedEntryType": "variantInSample",
-          "url": "https://exampleBeacons.org/individuals/{id}/variants_in_sample"
-        },
         "biosample": {
           "returnedEntryType": "biosample",
           "url": "https://exampleBeacons.org/individuals/{id}/biosamples"

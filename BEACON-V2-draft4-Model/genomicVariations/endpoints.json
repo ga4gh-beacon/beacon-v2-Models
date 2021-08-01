@@ -129,7 +129,7 @@
         }
       }
     },
-    "/g_variants/{id}/variant_annotations": {
+    "/g_variants/{id}/biosamples": {
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
@@ -137,8 +137,8 @@
           { "$ref":"#/components/parameters/limit" },
           { "$ref":"#/components/parameters/entryId" }
         ],
-        "description": "Get the annotations list from one variant, identified by its (unique) 'id'.\n",
-        "operationId": "getOneGenomicVariantAnnotations",
+        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'.\n",
+        "operationId": "getOneGenomicVariantBiosamples",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -159,8 +159,8 @@
         }
       },
       "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
-        "operationId": "postOneGenomicVariantAnnotations",
+        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'.\n",
+        "operationId": "postOneGenomicVariantBiosamples",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {
@@ -191,7 +191,7 @@
         }
       }
     },
-    "/g_variants/{id}/variant_interpretations": {
+    "/g_variants/{id}/individuals": {
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
@@ -199,8 +199,8 @@
           { "$ref":"#/components/parameters/limit" },
           { "$ref":"#/components/parameters/entryId" }
         ],
-        "description": "Get the interpretations list from one variant, identified by its (unique) 'id'.\n",
-        "operationId": "getOneGenomicVariantInterpretations",
+        "description": "Get the individuals list from one genomic variant, identified by its (unique) 'id'.\n",
+        "operationId": "getOneGenomicVariantIndividuals",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -221,70 +221,8 @@
         }
       },
       "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
-        "operationId": "postOneGenomicVariantIntgerpretations",
-        "tags": [ "POST Endpoints" ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      }
-    },
-    "/g_variants/{id}/variants_in_sample": {
-      "get": {
-        "parameters": [
-          { "$ref":"#/components/parameters/requestedSchema" },
-          { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
-        ],
-        "description": "Get the list of variants instances, from samples, for one variant, identified by its (unique) 'id'.\n",
-        "operationId": "getOneGenomicVariantVariantsInSample",
-        "tags": [ "GET Endpoints" ],
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      },
-      "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
-        "operationId": "postOneGenomicVariantVariantsInSample",
+        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'.\n",
+        "operationId": "postOneGenomicVariantIndividuals",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {

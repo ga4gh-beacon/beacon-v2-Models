@@ -21,7 +21,9 @@
           { "$ref": "#/components/parameters/skip" },
           { "$ref": "#/components/parameters/limit" },
           { "$ref": "#/components/parameters/includeResultsetResponses" },
-          { "$ref": "#/components/parameters/genomicAlleleShortForm" }
+          { "$ref": "#/components/parameters/genomicAlleleShortForm" },
+          { "$ref": "#/components/parameters/gene" },
+          { "$ref": "#/components/parameters/aaChange" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",
@@ -298,6 +300,22 @@
           "type": "string"
         },
         "example": "NM_004006.2:c.4375C>T"
+      },
+      "gene": {
+        "name": "gene",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "example": "BRAF"
+      },
+      "aaChange": {
+        "name": "aachange",
+        "in": "query",
+        "schema": {
+          "type": "string"
+        },
+        "example": "V600E"
       }
     }
   }

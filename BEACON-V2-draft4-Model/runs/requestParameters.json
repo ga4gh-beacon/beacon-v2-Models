@@ -6,6 +6,14 @@
       "id": {
         "description": "Id of the sequencing run to display.\n",
         "type": "string"
+      },
+      "individualId": {
+        "description": "Id of the individual to which the run belongs.\n",
+        "type": "string"
+      },
+      "biosampleId": {
+        "description": "Id of the biosample to which the run belongs.\n",
+        "type": "string"
       }
     }
   }

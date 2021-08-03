@@ -83,10 +83,12 @@
       }
     },
     "/cohorts/{id}": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
-          { "$ref":"#/components/parameters/requestedSchema" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/requestedSchema" }
         ],
         "description": "Get details about one cohort, identified by its (unique) 'id'.\n",
         "operationId": "getOneCohort",
@@ -143,12 +145,14 @@
       }
     },
     "/cohorts/{id}/individuals": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the individuals from one cohort, identified by its (unique) 'id'.\n",
         "operationId": "getOneCohortIndividuals",
@@ -205,9 +209,11 @@
       }
     },
     "/cohorts/{id}/filtering_terms": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
      "get": {
         "parameters": [
-          { "$ref":"#/components/parameters/entryId" },
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],

@@ -74,8 +74,10 @@
       }
     },
     "/biosamples/{id}": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
-        "parameters": [{ "$ref": "#/components/parameters/entryId" }],
         "description": "Get details about one biosample, identified by its (unique) 'id'.\n",
         "operationId": "getOneBiosample",
         "tags": ["GET Endpoints"],
@@ -129,12 +131,14 @@
       }
     },
     "/biosamples/{id}/variants_in_sample": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the list of variants instances, from samples, for one biosample, identified by its (unique) 'id'.\n",
         "operationId": "getOneBiosampleVariantsInSample",
@@ -191,12 +195,14 @@
       }
     },
     "/biosamples/{id}/g_variants": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'.\n",
         "operationId": "getOneBiosampleGenomicVariants",
@@ -253,12 +259,14 @@
       }
     },
     "/biosamples/{id}/analyses": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the analysis list from one biosample, identified by its (unique) 'id'.\n",
         "operationId": "getOneBiosampleAnalysis",
@@ -315,12 +323,14 @@
       }
     },
     "/biosamples/{id}/runs": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the runs list from one biosample, identified by its (unique) 'id'.\n",
         "operationId": "getOneBiosampleRuns",

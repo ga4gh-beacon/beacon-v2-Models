@@ -21,7 +21,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-dataset-v2.0.0-draft.4",
         "name": "Default schema for datasets",
-        "referenceToSchemaDefinition": "./datasets/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/datasets/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "aCollectionOf": [{ "id": "genomicVariant", "name": "Genomic Variants" }],
@@ -39,7 +39,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-cohort-v2.0.0-draft.4",
         "name": "Default schema for cohorts",
-        "referenceToSchemaDefinition": "./cohorts/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/cohorts/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "aCollectionOf": [{ "id": "individual", "name": "Individuals" }],
@@ -57,7 +57,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-variant-v2.0.0-draft.4",
         "name": "Default schema for a genomic variation",
-        "referenceToSchemaDefinition": "./genomicVariations/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/genomicVariations/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []
@@ -74,7 +74,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-individual-v2.0.0-draft.4",
         "name": "Default schema for an individual",
-        "referenceToSchemaDefinition": "./individuals/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/individuals/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []
@@ -91,7 +91,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-biosample-v2.0.0-draft.4",
         "name": "Default schema for a biological sample",
-        "referenceToSchemaDefinition": "./biosamples/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/biosamples/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []
@@ -108,7 +108,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-run-v2.0.0-draft.4",
         "name": "Default schema for a sequencing run",
-        "referenceToSchemaDefinition": "./runs/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/runs/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []
@@ -125,7 +125,7 @@
       "defaultSchema": {
         "id": "ga4gh-beacon-analysis-v2.0.0-draft.4",
         "name": "Default schema for a bioinformatics analysis",
-        "referenceToSchemaDefinition": "./analyses/defaultSchema.json",
+        "referenceToSchemaDefinition": "https://exampleBeacons.org/analyses/defaultSchema.json",
         "schemaVersion": "v2.0.0-draft.4"
       },
       "additionallySupportedSchemas": []

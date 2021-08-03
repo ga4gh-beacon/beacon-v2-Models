@@ -3,7 +3,7 @@
   "endpointSets": {
     "dataset": {
       "entryType": "dataset",
-      "openAPIEndpointsDefinition": "./datasets/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/datasets/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/datasets",
       "singleEntryUrl": "https://exampleBeacons.org/datasets/{id}",
       "filteringTermsUrl": "https://exampleBeacons.org/datasets/{id}/filtering_terms",
@@ -24,7 +24,7 @@
     },
     "cohort": {
       "entryType": "cohort",
-      "openAPIEndpointsDefinition": "./cohorts/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/cohorts/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/cohorts",
       "singleEntryUrl": "https://exampleBeacons.org/cohorts/{id}",
       "filteringTermsUrl": "https://exampleBeacons.org/cohorts/{id}/filtering_terms",
@@ -37,7 +37,7 @@
     },
     "genomicVariant": {
       "entryType": "genomicVariant",
-      "openAPIEndpointsDefinition": "./genomicVariations/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/genomicVariations/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/g_variants",
       "singleEntryUrl": "https://exampleBeacons.org/g_variants/{id}",
       "endpoints": {
@@ -53,7 +53,7 @@
     },
     "individual": {
       "entryType": "individual",
-      "openAPIEndpointsDefinition": "./individuals/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/individuals/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/individuals",
       "singleEntryUrl": "https://exampleBeacons.org/individuals/{id}",
       "filteringTermsUrl": "https://exampleBeacons.org/individuals/{id}/filtering_terms",
@@ -70,7 +70,7 @@
     },
     "biosample": {
       "entryType": "biosample",
-      "openAPIEndpointsDefinition": "./biosamples/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/biosamples/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/biosamples",
       "singleEntryUrl": "https://exampleBeacons.org/biosamples/{id}",
       "endpoints": {
@@ -90,7 +90,7 @@
     },
     "run": {
       "entryType": "run",
-      "openAPIEndpointsDefinition": "./runs/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/runs/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/runs",
       "singleEntryUrl": "https://exampleBeacons.org/runs/{id}",
       "endpoints": {
@@ -106,7 +106,7 @@
     },
     "analysis": {
       "entryType": "analysis",
-      "openAPIEndpointsDefinition": "./analyses/endpoints.json",
+      "openAPIEndpointsDefinition": "https://exampleBeacons.org/analyses/endpoints.json",
       "rootUrl": "https://exampleBeacons.org/analyses",
       "singleEntryUrl": "https://exampleBeacons.org/analyses/{id}",
       "endpoints": {

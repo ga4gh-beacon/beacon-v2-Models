@@ -74,8 +74,10 @@
       }
     },
     "/individuals/{id}": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
-        "parameters": [{ "$ref": "#/components/parameters/entryId" }],
         "description": "Get details about one individual, identified by its (unique) 'id'.\n",
         "operationId": "getOneIndividual",
         "tags": ["GET Endpoints"],
@@ -128,75 +130,15 @@
         }
       }
     },
-    "/individuals/{id}/variants_in_sample": {
-      "get": {
-        "parameters": [
-          { "$ref":"#/components/parameters/requestedSchema" },
-          { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
-        ],
-        "description": "Get the list of variants instances, from samples, for one individual, identified by its (unique) 'id'.\n",
-        "operationId": "getOneIndividualVariantsInSample",
-        "tags": [ "GET Endpoints" ],
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      },
-      "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
-        "operationId": "postOneIndividualVariantsInSample",
-        "tags": [ "POST Endpoints" ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      }
-    },
     "/individuals/{id}/g_variants": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the genomic variants list from one individual, identified by its (unique) 'id'.\n",
         "operationId": "getOneIndividualGenomicVariants",
@@ -253,12 +195,14 @@
       }
     },
     "/individuals/{id}/biosamples": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the biosamples list from one individual, identified by its (unique) 'id'.\n",
         "operationId": "getOneIndividualBiosamples",
@@ -314,72 +258,12 @@
         }
       }
     },
-    "/individuals/{id}/interactors": {
-      "get": {
-        "parameters": [
-          { "$ref":"#/components/parameters/requestedSchema" },
-          { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
-        ],
-        "description": "Get the interactor list from one individual, identified by its (unique) 'id'.\n",
-        "operationId": "getOneIndividualInteractors",
-        "tags": [ "GET Endpoints" ],
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      },
-      "post": {
-        "description": "Get the interactor list from one individual, identified by its (unique) 'id'.\n",
-        "operationId": "postOneDatasetBiosamples",
-        "tags": [ "POST Endpoints" ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation.\n",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation.\n",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      }
-    },
     "/individuals/filtering_terms": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
-          { "$ref":"#/components/parameters/entryId" },
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],

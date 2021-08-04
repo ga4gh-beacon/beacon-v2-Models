@@ -19,6 +19,14 @@
         "individual": {
           "returnedEntryType": "individual",
           "url": "https://exampleBeacons.org/datasets/{id}/individuals"
+        },
+        "runs": {
+          "returnedEntryType": "run",
+          "url": "https://exampleBeacons.org/datasets/{id}/runs"
+        },
+        "analyses": {
+          "returnedEntryType": "analysis",
+          "url": "https://exampleBeacons.org/datasets/{id}/analyses"
         }
       }
     },
@@ -32,6 +40,22 @@
         "individual": {
           "returnedEntryType": "individual",
           "url": "https://exampleBeacons.org/cohorts/{id}/individuals"
+        },
+        "genomicVariant": {
+          "returnedEntryType": "genomicVariant",
+          "url": "https://exampleBeacons.org/cohorts/{id}/g_variants"
+        },
+        "biosample": {
+          "returnedEntryType": "biosample",
+          "url": "https://exampleBeacons.org/cohorts/{id}/biosamples"
+        },
+        "runs": {
+          "returnedEntryType": "run",
+          "url": "https://exampleBeacons.org/cohorts/{id}/runs"
+        },
+        "analyses": {
+          "returnedEntryType": "analysis",
+          "url": "https://exampleBeacons.org/cohorts/{id}/analyses"
         }
       }
     },
@@ -49,6 +73,14 @@
           "returnedEntryType": "individual",
           "url": "https://exampleBeacons.org/g_variants/{id}/individuals"
         }
+      },
+      "runs": {
+        "returnedEntryType": "run",
+        "url": "https://exampleBeacons.org/g_variants/{id}/runs"
+      },
+      "analyses": {
+        "returnedEntryType": "analysis",
+        "url": "https://exampleBeacons.org/g_variants/{id}/analyses"
       }
     },
     "individual": {
@@ -65,6 +97,14 @@
         "biosample": {
           "returnedEntryType": "biosample",
           "url": "https://exampleBeacons.org/individuals/{id}/biosamples"
+        },
+        "runs": {
+          "returnedEntryType": "run",
+          "url": "https://exampleBeacons.org/individuals/{id}/runs"
+        },
+        "analyses": {
+          "returnedEntryType": "analysis",
+          "url": "https://exampleBeacons.org/individuals/{id}/analyses"
         }
       }    
     },

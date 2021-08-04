@@ -75,8 +75,10 @@
       }
     },
     "/g_variants/{id}": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
-        "parameters": [{ "$ref": "#/components/parameters/entryId" }],
         "description": "Get details about one dummyEntry, identified by its (unique) 'id'.\n",
         "operationId": "getOneExampleEntry",
         "tags": ["GET Endpoints"],
@@ -130,12 +132,14 @@
       }
     },
     "/g_variants/{id}/biosamples": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'.\n",
         "operationId": "getOneGenomicVariantBiosamples",
@@ -192,12 +196,14 @@
       }
     },
     "/g_variants/{id}/individuals": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" },
-          { "$ref":"#/components/parameters/entryId" }
+          { "$ref":"#/components/parameters/limit" }
         ],
         "description": "Get the individuals list from one genomic variant, identified by its (unique) 'id'.\n",
         "operationId": "getOneGenomicVariantIndividuals",

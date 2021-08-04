@@ -266,6 +266,20 @@
           "description": "version of the source data.",
           "examples": ["gnomAD v3.1.1"]
         },
+        "frequencies":{
+          "type":"array",
+          "items": {
+            "$ref": "#/definitions/PopulationFreq"
+          },
+          "minItems": 1
+        }
+
+      },
+      "required": ["source", "sourceReference", "frequencies"]
+    },
+    "PopulationFreq": {
+      "type":"object",
+      "properties": {
         "population": {
           "type": "string",
           "description": "A name for the population. A population could an ethnic, geographical one or just the 'members`of a study.",
@@ -282,7 +296,7 @@
           "examples": [0.00003186]
         }
       },
-      "required": ["source", "sourceReference", "population", "AF"]
+      "required": ["population", "alleleFrequency"]
     },
     "CaseLevelVariant": {
       "type": "object",

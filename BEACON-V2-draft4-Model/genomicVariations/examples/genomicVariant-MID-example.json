@@ -45,8 +45,8 @@
       "sourceReference":"https://gnomad.broadinstitute.org/",
       "version":"v3.1.1",
       "frequencies": [
-        {"population": "European (non-Finish)", "AF":	0.00002939 },
-        {"population": "Other", "AF": 0.00 }
+        {"population": "European (non-Finish)", "alleleFrequency":	0.00002939 },
+        {"population": "Other", "alleleFrequency": 0.00 }
       ]
     },
     {
@@ -54,9 +54,9 @@
       "sourceReference":"https://www.ncbi.nlm.nih.gov/snp/docs/gsr/alfa/",
       "version":"20201027095038",
       "frequencies": [
-        {"population": "Total", "AF": 0.00009 },
-        {"population": "European", "AF": 0.00006 },
-        {"population": "African", "AF": 0.00 }
+        {"population": "Total", "alleleFrequency": 0.00009 },
+        {"population": "European", "alleleFrequency": 0.00006 },
+        {"population": "African", "alleleFrequency": 0.00 }
       ]
     }
   ]

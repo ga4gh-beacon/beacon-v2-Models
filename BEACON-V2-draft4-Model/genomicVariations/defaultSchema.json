@@ -16,7 +16,7 @@
       "type": "string"
     },
     "variantType": {
-      "description": "The `variantType` declares the nature of the variation in relation to a reference. It could be a single change, a short insertion or deletion, a bigger structural change, etc. In a resoonse, it is used to describe the variation. In a request, it is used to declare the type of event the Beacon client is looking for. It could be used standalone (without `alternateBases` parameter) in cases in which query variants could not be defined through a sequence of one or more bases. Examples here are e.g. structural variants: \n* DUP - increased allelic count of material from the genomic region  between `start` and `end` positions  - no assumption about the placement of the additional sequences is  being made (i.e. no _in situ_ requirement as tandem duplications)\n * DEL: deletion of sequence following `start` \n* BND: breakend, i.e. termination of the allele at position `start` or in the `start[0]]` => `start[1]` interval, or fusion of the sequence to distant partner.\n Either `alternateBases` or `variantType` is required, with the exception of range queries (single `start` and `end` parameters).",
+      "description": "The `variantType` declares the nature of the variation in relation to a reference. It could be a single change, a short insertion or deletion, a bigger structural change, etc. In a response, it is used to describe the variation. In a request, it is used to declare the type of event the Beacon client is looking for. It could be used standalone (without `alternateBases` parameter) in cases in which query variants could not be defined through a sequence of one or more bases. Examples here are e.g. structural variants: \n* DUP - increased allelic count of material from the genomic region  between `start` and `end` positions  - no assumption about the placement of the additional sequences is  being made (i.e. no _in situ_ requirement as tandem duplications)\n * DEL: deletion of sequence following `start` \n* BND: breakend, i.e. termination of the allele at position `start` or in the `start[0]]` => `start[1]` interval, or fusion of the sequence to distant partner.\n Either `alternateBases` or `variantType` is required, with the exception of range queries (single `start` and `end` parameters).",
       "type": "string",
       "examples": ["SNP", "DEL", "DUP", "BND"],
       "default": "SNP"
@@ -181,7 +181,7 @@
           ]
         },
         "featureID": {
-          "description": "Where applicable, ID/accession/name of genomic feature related to the `featureClass`. Preferably in CURIE format. If the value is a gene if or name, it points to the gene related to the 'featureClass', e.g. 'the 5 prime UTR upstream of TP53'",
+          "description": "Where applicable, ID/accession/name of genomic feature related to the `featureClass`. Preferably in CURIE format. If the value is a gene id or name, it points to the gene related to the 'featureClass', e.g. 'the 5 prime UTR upstream of TP53'",
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
           "examples": [{ "id": "HGNC:11998", "label": "TP53" }]
         }

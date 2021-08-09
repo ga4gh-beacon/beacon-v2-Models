@@ -4,7 +4,7 @@
   "info": {
     "version": "2.0.0-draft.4",
     "title": "GA4GH Beacon API Specification - Biosamples endpoints",
-    "description": "TBD.",
+    "description": "TBD",
     "contact": {
       "email": "beacon@ga4gh.org"
     },
@@ -27,7 +27,7 @@
         "tags": ["GET Endpoints"],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -57,7 +57,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -67,7 +67,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -78,12 +78,12 @@
         { "$ref":"#/components/parameters/entryId" }
       ],
       "get": {
-        "description": "Get details about one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get details about one biosample, identified by its (unique) 'id'",
         "operationId": "getOneBiosample",
         "tags": ["GET Endpoints"],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -93,13 +93,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get details about one Biosample, identified by its (unique) 'id'.\n",
+        "description": "Get details about one Biosample, identified by its (unique) 'id'",
         "operationId": "postOneBiosample",
         "tags": ["POST Endpoints"],
         "requestBody": {
@@ -114,7 +114,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema": {
@@ -124,7 +124,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -140,12 +140,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the list of variants instances, from samples, for one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the list of variants instances, from samples, for one biosample, identified by its (unique) 'id'",
         "operationId": "getOneBiosampleVariantsInSample",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -156,13 +156,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the list of variants instances, from samples, for one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the list of variants instances, from samples, for one biosample, identified by its (unique) 'id'",
         "operationId": "postOneBiosampleVariantsInSample",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -177,7 +177,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -188,7 +188,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -204,12 +204,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'",
         "operationId": "getOneBiosampleGenomicVariants",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -220,13 +220,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'",
         "operationId": "potOneBiosampleGenomicVariants",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -241,7 +241,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -252,7 +252,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -268,12 +268,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'",
         "operationId": "getOneBiosampleAnalysis",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -284,13 +284,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'",
         "operationId": "postOneBiosampleAnalysis",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -305,7 +305,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -316,7 +316,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -332,12 +332,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the runs list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the runs list from one biosample, identified by its (unique) 'id'",
         "operationId": "getOneBiosampleRuns",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -348,13 +348,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the runs list from one biosample, identified by its (unique) 'id'.\n",
+        "description": "Get the runs list from one biosample, identified by its (unique) 'id'",
         "operationId": "postOneBiosampleRuns",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -369,7 +369,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -380,7 +380,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }

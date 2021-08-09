@@ -61,7 +61,7 @@
         "type": "string",
         "examples": ["BRAF", "SCN5A"]
       },
-      "aachange": {
+      "aminoacidSubstitution": {
         "description": "Aminoacid substitution of interest. Format 1 letter ",
         "type": "string",
         "examples": ["V600E", "M734V"]

@@ -23,7 +23,7 @@
           { "$ref": "#/components/parameters/includeResultsetResponses" },
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
           { "$ref": "#/components/parameters/gene" },
-          { "$ref": "#/components/parameters/aaChange" }
+          { "$ref": "#/components/parameters/aminoacidSubstitution" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",
@@ -315,8 +315,8 @@
         },
         "example": "BRAF"
       },
-      "aaChange": {
-        "name": "aachange",
+      "aminoacidSubstitution": {
+        "name": "aminoacidSubstitution",
         "in": "query",
         "schema": {
           "type": "string"

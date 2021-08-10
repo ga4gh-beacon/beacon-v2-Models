@@ -283,7 +283,7 @@
         "schema": {
           "type": "string"
         },
-        "example": "ga4gh-service-info-v1.0\n"
+        "example": "ga4gh-service-info-v1.0"
       },
       "skip": {
         "name": "skip",

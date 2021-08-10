@@ -4,7 +4,7 @@
   "info": {
     "version": "2.0.0-draft.4",
     "title": "GA4GH Beacon API Specification - Individuals endpoints",
-    "description": "TBD.",
+    "description": "TBD",
     "contact": {
       "email": "beacon@ga4gh.org"
     },
@@ -35,7 +35,7 @@
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": {
                 "schema":{
@@ -65,7 +65,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -76,7 +76,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -90,12 +90,12 @@
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" }
         ],
-        "description": "Get details about one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get details about one dataset, identified by its (unique) 'id'",
         "operationId": "getOneDataset",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -106,13 +106,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get details about one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get details about one dataset, identified by its (unique) 'id'",
         "operationId": "postOneDataset",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -127,7 +127,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -138,7 +138,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -154,12 +154,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the genomic variants list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the genomic variants list from one dataset, identified by its (unique) 'id'",
         "operationId": "getOneDatasetEntries",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -170,13 +170,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the genomic variants list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the genomic variants list from one dataset, identified by its (unique) 'id'",
         "operationId": "postOneDatasetEntries",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -191,7 +191,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -202,7 +202,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -218,12 +218,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'",
         "operationId": "getOneDatasetBiosamples",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -234,13 +234,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'",
         "operationId": "postOneDatasetBiosamples",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -255,7 +255,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -266,7 +266,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -282,12 +282,12 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the individuals list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the individuals list from one dataset, identified by its (unique) 'id'",
         "operationId": "getOneDatasetIndividuals",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -298,13 +298,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the biosamples list from one dataset, identified by its (unique) 'id'",
         "operationId": "postOneDatasetIndividuals",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -319,7 +319,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -330,7 +330,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -345,13 +345,13 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the list of filtering terms that could be used with a given dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the list of filtering terms that could be used with a given dataset, identified by its (unique) 'id'",
         "operationId": "getOneDatasetFilteringTerms",
         "tags": [ "GET Endpoints" ],
 
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -362,13 +362,13 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
       },
       "post": {
-        "description": "Get the list of filtering terms that could be used with a given dataset, identified by its (unique) 'id'.\n",
+        "description": "Get the list of filtering terms that could be used with a given dataset, identified by its (unique) 'id'",
         "operationId": "postOneDatasetFilteringTerms",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
@@ -383,7 +383,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation.\n",
+            "description": "Successful operation",
             "content": {
               "application/json": 
               {
@@ -394,7 +394,7 @@
             }
           },
           "default": {
-            "description": "An unsuccessful operation.\n",
+            "description": "An unsuccessful operation",
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
           }
         }
@@ -411,7 +411,7 @@
         "schema": {
           "type": "string"
         },
-        "example": "ga4gh-service-info-v1.0\n"
+        "example": "ga4gh-service-info-v1.0"
       },
       "skip": {
         "name": "skip",

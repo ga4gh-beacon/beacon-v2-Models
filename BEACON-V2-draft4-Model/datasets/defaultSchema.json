@@ -1,34 +1,34 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "description": "A dataset available in the beacon.\n",
+  "description": "A dataset available in the beacon",
   "$comment": "version: ga4gh-beacon-dataset-v2.0.0-draft.4",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier of the dataset.\n"
+      "description": "Unique identifier of the dataset"
     },
     "name": {
       "type": "string",
-      "description": "Name of the dataset.\n"
+      "description": "Name of the dataset"
     },
     "description": {
       "type": "string",
-      "description": "Description of the dataset.\n"
+      "description": "Description of the dataset"
     },
     "createDateTime": {
       "type": "string",
-      "description": "The time the dataset was created (ISO 8601 format).\n",
+      "description": "The time the dataset was created (ISO 8601 format)",
       "example": "2012-07-29 or 2017-01-17T20:33:40Z"
     },
     "updateDateTime": {
       "type": "string",
-      "description": "The time the dataset was updated in (ISO 8601 format).\n",
+      "description": "The time the dataset was updated in (ISO 8601 format)",
       "example": "2012-07-19 or 2017-01-17T20:33:40Z"
     },
     "version": {
       "type": "string",
-      "description": "Version of the dataset.\n"
+      "description": "Version of the dataset"
     },
     "externalUrl": {
       "type": "string",
@@ -48,7 +48,7 @@
   "definitions": {
     "DataUseConditions": {
       "type": "object",
-      "description": "Data use conditions ruling this dataset.\n",
+      "description": "Data use conditions ruling this dataset",
       "properties": {
         "duoDataUse": {
           "type": "array",
@@ -64,7 +64,7 @@
     "DUODataUse": {
       "allOf": [
         {
-          "description": "TBD\n"
+          "description": "TBD"
         },
         {
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"

@@ -5,7 +5,7 @@
   "description": "Schema for a genomic variant entry.",
   "type": "object",
   "required": [
-    "variantInternalId",
+    "id",
     "variantType",
     "alternateBases",
     "position"

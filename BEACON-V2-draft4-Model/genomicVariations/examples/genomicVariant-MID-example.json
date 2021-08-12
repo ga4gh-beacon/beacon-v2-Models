@@ -1,6 +1,6 @@
 {
   "$schema": "../defaultSchema.json",
-  "variantInternalId": "var123",
+  "id": "var123",
   "variantType": "SNP",
   "referenceBases": "G",
   "alternateBases": "A",

@@ -1,6 +1,6 @@
 {
   "$schema": "../defaultSchema.json",
-  "variantInternalId": "GRCh37-1-55505652-G-A",
+  "id": "GRCh37-1-55505652-G-A",
   "variantType": "SNP",
   "alternateBases": "A",
   "position": {

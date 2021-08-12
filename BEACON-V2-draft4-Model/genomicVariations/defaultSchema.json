@@ -12,7 +12,7 @@
   ],
   "properties": {
     "id": {
-      "description": "The internal id of the variant. This is not supposed to be used for a public id, but ratehr as the 'primary key/identifier' of that variant inside a given Beacon instance. Therefore, e,g, `'id': 'var1'` could refer to completely unrelated variants in different resources. The public, standard, popular identifiers or the GA4GH Variant Representation Id (VRSid) MUST be returned in the 'identifiers' section. A Beacon instance can, of course, use the VRSid as their own internal id, in such case, the VRSid would be repeated in both places.",
+      "description": "The internal id of the variant. This is not supposed to be used for a public id, but rather as the 'primary key/identifier' of that variant inside a given Beacon instance. Therefore, e,g, `'id': 'var1'` could refer to completely unrelated variants in different resources. The public, standard, popular identifiers or the GA4GH Variant Representation Id (VRSid) MUST be returned in the 'identifiers' section. A Beacon instance can, of course, use the VRSid as their own internal id, in such case, the VRSid would be repeated in both places.",
       "type": "string"
     },
     "variantType": {

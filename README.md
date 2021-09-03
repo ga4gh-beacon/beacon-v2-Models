@@ -25,3 +25,10 @@ The Model repo points to several Models and (temporarily) hosts the Model for Be
 2. **The Beacon v2 draft 4 Model:** (in *this* repo) The current version of the complete Beacon v2 Model. 
 3. **The Beacon v2 draft 3 Model:** [repo](https://github.com/ga4gh-beacon/Model-BEACON-V2-draft3) The version of the Model that has been current for a longer time and to which many examples, documents, and pilot implementations still refers. It must be considered as ***deprecated***.
 4. **The Beacon v1 Model:** [repo](https://github.com/ga4gh-beacon/Model-BEACON-v1) Provided as an example for Beacon v1 implementers that want to update to Beacon v2 but not planning to add any additional entry type to their Beacon.
+
+### Coding and naming conventions
+For historical reasons, in the names of entities, parameters and URLs we are following the conventions:
+* Entity names: `PascalCase` 
+* parameters: `camelCase` 
+* URI path elements: `snake_case` 
+The only exception is: `service-info` which is a required GA4GH standard and has a different word separation convention.

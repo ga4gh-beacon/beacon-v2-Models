@@ -72,15 +72,15 @@
         "individual": {
           "returnedEntryType": "individual",
           "url": "https://exampleBeacons.org/g_variants/{id}/individuals"
+        },
+        "runs": {
+          "returnedEntryType": "run",
+          "url": "https://exampleBeacons.org/g_variants/{id}/runs"
+        },
+        "analyses": {
+          "returnedEntryType": "analysis",
+          "url": "https://exampleBeacons.org/g_variants/{id}/analyses"
         }
-      },
-      "runs": {
-        "returnedEntryType": "run",
-        "url": "https://exampleBeacons.org/g_variants/{id}/runs"
-      },
-      "analyses": {
-        "returnedEntryType": "analysis",
-        "url": "https://exampleBeacons.org/g_variants/{id}/analyses"
       }
     },
     "individual": {

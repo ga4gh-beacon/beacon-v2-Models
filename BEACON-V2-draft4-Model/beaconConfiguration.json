@@ -96,8 +96,8 @@
       },
       "additionallySupportedSchemas": []
     },
-    "runs": {
-      "id": "runs",
+    "run": {
+      "id": "run",
       "name": "Sequencing run",
       "ontologyTermForThisType": {
         "id": "NCIT:C148088",

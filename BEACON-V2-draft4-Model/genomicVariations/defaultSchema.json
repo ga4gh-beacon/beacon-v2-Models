@@ -49,12 +49,6 @@
     },
     "variantLevelData": {
       "$ref": "#/definitions/VariantLevelData"
-    },
-    "frequencyInPopulations": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/FreqInPops"
-      }
     }
   },
   "definitions": {
@@ -364,7 +358,13 @@
         "items": {
           "$ref": "#/definitions/PhenoClinicEffect"
         }
-      }
+      },
+      "frequencyInPopulations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/FreqInPops"
+        }
+      }      
     },
     "SoftwareTool": {
       "type": "object",

@@ -23,7 +23,7 @@
           { "$ref": "#/components/parameters/includeResultsetResponses" },
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
           { "$ref": "#/components/parameters/geneId" },
-          { "$ref": "#/components/parameters/aaChange" }
+          { "$ref": "#/components/parameters/aminoacidChange" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",

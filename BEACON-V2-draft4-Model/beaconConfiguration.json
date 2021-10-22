@@ -17,7 +17,7 @@
         "label": "Data set"
       },
       "partOfSpecification": "Beacon v2.0.0-draft.4",
-      "description": "A Dataset is a collection of records, like rows in a database or cards in a cardholder.",
+      "description": "A Dataset is a collection of related sets of information, e.g. genomic variations together with associated procedural and biological metadata. In a Beacon context, a datasets may consist of information generated in a specific study or project, or represent the main content of the Beacon resource.",
       "defaultSchema": {
         "id": "ga4gh-beacon-dataset-v2.0.0-draft.4",
         "name": "Default schema for datasets",
@@ -96,8 +96,8 @@
       },
       "additionallySupportedSchemas": []
     },
-    "runs": {
-      "id": "runs",
+    "run": {
+      "id": "run",
       "name": "Sequencing run",
       "ontologyTermForThisType": {
         "id": "NCIT:C148088",

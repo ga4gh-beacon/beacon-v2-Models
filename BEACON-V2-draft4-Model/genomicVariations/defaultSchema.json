@@ -53,7 +53,7 @@
     "frequencyInPopulations": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/FreqInPops"
+        "$ref": "#/definitions/FrequencyInPopulations"
       }
     }
   },
@@ -242,7 +242,7 @@
       },
       "required": ["conditionId", "effect"]
     },
-    "FreqInPops": {
+    "FrequencyInPopulations": {
       "type": "object",
       "properties": {
         "source": {
@@ -269,7 +269,7 @@
         "frequencies":{
           "type":"array",
           "items": {
-            "$ref": "#/definitions/PopulationFreq"
+            "$ref": "#/definitions/PopulationFrequency"
           },
           "minItems": 1
         }
@@ -277,7 +277,7 @@
       },
       "required": ["source", "sourceReference", "frequencies"]
     },
-    "PopulationFreq": {
+    "PopulationFrequency": {
       "type":"object",
       "properties": {
         "population": {

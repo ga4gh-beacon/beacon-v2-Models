@@ -130,7 +130,7 @@
         }
       }
     },
-    "/analyses/{id}/variants_in_sample": {
+    "/analyses/{id}/g_variants": {
       "parameters": [
         { "$ref":"#/components/parameters/entryId" }
       ],
@@ -140,8 +140,8 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the list of variants instances, from samples, for one bioinformatics analysis, identified by its (unique) 'id'",
-        "operationId": "getOneAnalysisVariantsInSample",
+        "description": "Get the list of variants instances for one bioinformatics analysis, identified by its (unique) 'id'",
+        "operationId": "getOneAnalysisVariants",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -162,8 +162,8 @@
         }
       },
       "post": {
-        "description": "Get the list of variants instances, from samples, for one bioinformatics analysis, identified by its (unique) 'id'",
-        "operationId": "postOneAnalysisVariantsInSample",
+        "description": "Get the list of variants instances for one bioinformatics analysis, identified by its (unique) 'id'",
+        "operationId": "postOneAnalysisVariants",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {

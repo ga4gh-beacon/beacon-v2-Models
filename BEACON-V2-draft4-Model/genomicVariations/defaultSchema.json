@@ -303,6 +303,10 @@
       "type": "object",
       "description": "",
       "properties": {
+        "id": {
+          "description": "Internal id of this case level *instance* of the variant. This is an optional housekeeping parameter and should not be confused with the identifier of the variant (`variantInternalId`).",
+          "type": "string"
+        },
         "individualId": {
           "description": "Reference to individual ID.",
           "type": "string"

@@ -56,13 +56,13 @@
       "mateName": {
         "$ref": "./requestParametersComponents.json#/definitions/RefSeqId"
       },
-      "gene": {
-        "description": "Gene symbol following the HGNC (https://www.genenames.org) nomenclature.",
+      "geneId": {
+        "description": "Gene identifir, it is strongly suggested to use a symbol following the HGNC (https://www.genenames.org) nomenclature.",
         "type": "string",
         "examples": ["BRAF", "SCN5A"]
       },
-      "aachange": {
-        "description": "Aminoacid substitution of interest. Format 1 letter ",
+      "aminoacidChange": {
+        "description": "Aminoacid alteration of interest. Format 1 letter ",
         "type": "string",
         "examples": ["V600E", "M734V"]
       }

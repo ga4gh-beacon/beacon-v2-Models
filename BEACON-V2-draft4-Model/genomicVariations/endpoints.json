@@ -22,8 +22,8 @@
           { "$ref": "#/components/parameters/limit" },
           { "$ref": "#/components/parameters/includeResultsetResponses" },
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
-          { "$ref": "#/components/parameters/gene" },
-          { "$ref": "#/components/parameters/aaChange" }
+          { "$ref": "#/components/parameters/geneId" },
+          { "$ref": "#/components/parameters/aminoacidChange" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",
@@ -289,7 +289,7 @@
         }
       },
       "includeResultsetResponses": {
-        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json#/definitions/IncludeResultsetResponses"
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
       },
       "entryId": {
         "name": "id",
@@ -307,16 +307,16 @@
         },
         "example": "NM_004006.2:c.4375C>T"
       },
-      "gene": {
-        "name": "gene",
+      "geneId": {
+        "name": "geneid",
         "in": "query",
         "schema": {
           "type": "string"
         },
         "example": "BRAF"
       },
-      "aaChange": {
-        "name": "aachange",
+      "aminoacidChange": {
+        "name": "aminoacidchange",
         "in": "query",
         "schema": {
           "type": "string"

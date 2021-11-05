@@ -23,8 +23,7 @@
     "runDate": {
       "description": "Date at which the experiment was performed.",
       "type": "string",
-      "format": "date",
-      "example
+      "format": "date"
     },
     "librarySource": {
       "description": "Ontology value for the source of the sequencing or hybridization library, e.g \"genomic source\", \"transcriptomic source\"",

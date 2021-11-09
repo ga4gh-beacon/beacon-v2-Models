@@ -20,10 +20,10 @@
       "type": "string",
       "example": "TCGA-AO-A0JJ"
     },
-    "runDate": {
-      "description": "Date at which the experiment was performed.",
+    "runTime": {
+      "description": "Date (and time) at which the experiment was performed.",
       "type": "string",
-      "format": "date"
+      "format": "date-time"
     },
     "librarySource": {
       "description": "Ontology value for the source of the sequencing or hybridization library, e.g \"genomic source\", \"transcriptomic source\"",
@@ -65,6 +65,6 @@
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"
     }
   },
-  "required": ["id", "biosampleId", "runDate"],
+  "required": ["id", "biosampleId"],
   "additionalProperties": true
 }

@@ -20,8 +20,8 @@
       "type": "string",
       "example": "TCGA-AO-A0JJ"
     },
-    "runTime": {
-      "description": "Date (and time) at which the experiment was performed.",
+    "runDate": {
+      "description": "Date (or DateTime) at which the experiment was performed.",
       "type": "string",
       "format": "date-time"
     },

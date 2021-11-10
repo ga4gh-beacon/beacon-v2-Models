@@ -308,15 +308,20 @@
           "type": "string"
         },
         "individualId": {
-          "description": "Reference to individual ID.",
+          "description": "Reference to individual ID (`individual.id`)",
           "type": "string"
         },
         "biosampleId": {
-          "description": "Reference to biosample ID.",
+          "description": "Reference to biosample ID (`biosample.id`)",
           "type": "string"
         },
         "analysisId": {
-          "description": "Reference to run (Run.runId)",
+          "description": "Reference to the bioinformatics analysis ID (`analysis.id`)",
+          "type": "string",
+          "example": "pgxcs-kftvldsu"
+        },
+        "runId": {
+          "description": "Reference to the experimental run ID (`run.id`)",
           "type": "string",
           "example": "SRR10903401"
         },

@@ -47,7 +47,7 @@
       ]
     },
     "Units": {
-      "description": "The kind of unit. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants. REQUIRED.",
+      "description": "The kind of unit. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "examples": [
         { "id": "NCIT:C70575", "label": "Roentgen" },

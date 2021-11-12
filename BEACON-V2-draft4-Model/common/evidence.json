@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "evidenceCode" : {
-      "description": "An ontology class that represents the evidence type. REQUIRED.",
+      "description": "An ontology class that represents the evidence type",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "example": {
         "id" : "ECO:0006017",

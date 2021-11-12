@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Disease",
-  "description": "Lisf of diseases diagnosed to the individual, defined by diseaseID, age of onset, stage, level of severity, outcome and the presence of family history.",
+  "description": "Diseases diagnosed e.g. to an individual, defined by diseaseID, age of onset, stage, level of severity, outcome and the presence of family history.",
   "type": "object",
   "properties": {
     "diseaseCode": {
@@ -34,7 +34,7 @@
       "example": true
     },
     "notes": {
-      "description": "Unstructured text to describe additional properties of this phenotypic feature.",
+      "description": "Unstructured text to describe additional properties of this disease instance.",
       "type": "string",
       "example": "Some free text"
     }

@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "units": {
-      "$ref": "./commonDefinitions.json#/definitions/Units"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/Units"
     },
     "value": {
       "description": "The value of the quantity in the units",
@@ -13,7 +13,7 @@
     },
     "referenceRange": {
       "description": "The normal range for the value",
-      "$ref": "./referenceRange.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/referenceRange.json",
       "example": {}
     }
   },

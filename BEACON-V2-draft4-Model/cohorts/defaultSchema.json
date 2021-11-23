@@ -144,40 +144,40 @@
           "description": "Geographic location(s) in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/commonDefinitions.json#/definitions/GeographicLocation"
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/GeographicLocation"
           }
         },
         "genders": {
           "description": "Gender(s) in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/commonDefinitions.json#/definitions/Sex"
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/Sex"
           }
         },
         "ethnicities": {
           "description": "Ethnias in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/commonDefinitions.json#/definitions/Ethnicity"
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/Ethnicity"
           }
         },
         "diseaseConditions": {
           "description": "Diseases in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/disease.json"
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/disease.json"
           }
         },
         "phenotypicConditions": {
           "description": "Phenotypic condition(s) in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/phenotypicFeature.json"
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/phenotypicFeature.json"
           }
         },
         "ageRange": {
           "description": "Individual age range in cohort inclusion criteria",
-          "$ref": "../common/ageRange.json"
+          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/ageRange.json"
         }
       }
     },

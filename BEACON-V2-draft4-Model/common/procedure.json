@@ -28,7 +28,7 @@
       "example": "2010-07-10"
     },
     "ageAtProcedure": {
-      "$ref": "./timeElement.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/timeElement.json"
     }
   },
   "required": ["procedureCode"]

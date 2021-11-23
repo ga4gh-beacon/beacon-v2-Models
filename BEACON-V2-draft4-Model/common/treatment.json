@@ -21,7 +21,7 @@
       ]
     },
     "ageAtOnset": {
-      "$ref": "./age.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/age.json"
     },
     "dose": {
       "description": "The amount of any substance administered over a specific period of time. [ NCIT:C15682 ] ",
@@ -29,7 +29,7 @@
     },
     "units": {
       "description": "Treatment dose units",
-      "$ref": "./commonDefinitions.json#/definitions/Units"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/Units"
     },
     "frequency": {
       "description": "The number of times a substance is administered within a specific time period. [ NCIT:C89081 ] ",

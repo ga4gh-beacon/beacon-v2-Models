@@ -6,11 +6,11 @@
   "properties": {
     "start": {
       "description": "Represents age as a ISO8601 duration (e.g., P18Y).",
-      "$ref": "./age.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/age.json"
     },
     "end": {
       "description": "Represents age as a ISO8601 duration (e.g., P59Y).",
-      "$ref": "./age.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/age.json"
     }
   }
 }

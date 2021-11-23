@@ -14,7 +14,7 @@
       ]
     },
     "ageOfOnset": {
-      "$ref": "./age.json"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/age.json"
     },
     "stage": {
       "description": "Ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119).",
@@ -26,7 +26,7 @@
       ]
     },
     "severityLevel": {
-      "$ref": "./commonDefinitions.json#/definitions/SeverityLevel"
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/commonDefinitions.json#/definitions/SeverityLevel"
     },
     "familyHistory": {
       "description": "Boolean indicating determined or self-reported presence of family history of the disease.",

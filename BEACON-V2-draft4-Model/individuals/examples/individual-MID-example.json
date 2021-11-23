@@ -1,5 +1,5 @@
 {
-  "$schema": "../defaultSchema.json",
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/individuals/defaultSchema.json",
   "id": "Ind001",
   "sex": {
     "id": "NCIT:C16576",

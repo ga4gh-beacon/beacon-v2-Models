@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "assayCode": {
-      "description": "Class that describes the assay used to produce the measurement. REQUIRED.",
+      "description": "Class that describes the assay used to produce the measurement",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "example": {
         "id": "LOINC:26515-7",
@@ -13,7 +13,7 @@
       }
     },
     "measurementValue": {
-      "description": "The result of the measurement. REQUIRED.",
+      "description": "The result of the measurement",
       "oneOf": [{ "$ref": "./value.json" }, { "$ref": "./complexValue.json" }]
     },
     "observationMoment": {
@@ -26,12 +26,12 @@
       }
     },
     "date": {
-      "description": "Date of measurement.",
+      "description": "Date of measurement",
       "type": "string",
       "format": "date"
     },
     "procedure": {
-      "description": "Clinical procedure performed to acquire the sample used for the measurement.",
+      "description": "Clinical procedure performed to acquire the sample used for the measurement",
       "$ref": "./procedure.json",
       "example": {
         "code": {
@@ -41,7 +41,7 @@
       }
     },
     "notes": {
-      "description": "Unstructured text to describe this measurement.",
+      "description": "Unstructured text to describe this measurement",
       "type": "string",
       "example": "Some free text"
     }

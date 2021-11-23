@@ -35,14 +35,7 @@
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/CollectionsResponse"
           },
           "default":{
             "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
@@ -65,15 +58,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/CollectionsResponse"
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -95,15 +80,7 @@
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/ResultsOKResponse"
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -127,15 +104,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/ResultsOKResponse"
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -159,15 +128,7 @@
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/ResultsOKResponse"
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -191,15 +152,7 @@
         },
         "responses": {
           "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
-                }
-              }
-            }
+            "$ref": "#/components/responses/ResultsOKResponse"
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -274,6 +227,36 @@
     }
   },
   "components": {
+    "responses": {
+      "ResultsOKResponse": {
+        "description": "Successful operation.",
+        "content": {
+          "application/json": {
+            "schema":{
+              "oneOf": [
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconBooleanResponse.json" },
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconCountResponse.json" },
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json" }
+              ]
+            }
+          }
+        }
+      },
+      "CollectionsResponse": {
+        "description": "Successful collection list operation.",
+        "content": {
+          "application/json": {
+            "schema":{
+              "oneOf": [
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconBooleanResponse.json" },
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconCountResponse.json" },
+                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconCollectionsResponse.json" }
+              ]
+            }
+          }
+        }
+      }
+    },
     "parameters": {
       "requestedSchema": {
         "name": "requestedSchema",

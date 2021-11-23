@@ -151,7 +151,7 @@
           "description": "Gender(s) in cohort inclusion criteria",
           "type": "array",
           "items": {
-            "$ref": "../common/commonDefinitions.json#/definitions/Gender"
+            "$ref": "../common/commonDefinitions.json#/definitions/Sex"
           }
         },
         "ethnicities": {

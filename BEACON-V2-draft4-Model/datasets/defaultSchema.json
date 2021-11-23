@@ -18,13 +18,15 @@
     },
     "createDateTime": {
       "type": "string",
+      "format": "date-time",
       "description": "The time the dataset was created (ISO 8601 format)",
-      "example": "2012-07-29 or 2017-01-17T20:33:40Z"
+      "examples": ["2012-07-29", "2017-01-17T20:33:40Z"]
     },
     "updateDateTime": {
       "type": "string",
+      "format": "date-time",
       "description": "The time the dataset was updated in (ISO 8601 format)",
-      "example": "2012-07-19 or 2017-01-17T20:33:40Z"
+      "examples": ["2012-07-19", "2017-01-17T20:33:40Z"]
     },
     "version": {
       "type": "string",

@@ -10,12 +10,12 @@
       "examples": [{ "id": "NCIT:C49670", "label": "Millimeter of Mercury" }]
     },
     "low": {
-      "description": "Lower range end of normal. REQUIRED.",
+      "description": "Lower range end of normal",
       "type": "number",
       "examples": [85]
     },
     "high": {
-      "description": "Upper range end of normal. REQUIRED.",
+      "description": "Upper range end of normal",
       "type": "number",
       "examples": [135]
     }

@@ -63,7 +63,7 @@
     },
     "obtentionProcedure": {
       "description": "Ontology value from NCIT Intervention or Procedure ontology term (NCIT:C25218) describing the procedure for sample obtention, e.g. NCIT:C15189 (biopsy).",
-      "$ref": "../common/procedure.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/procedure.json",
       "examples": [
         {"code": { "id": "NCIT:C15189", "label": "biopsy" } },
         {"code": { "id": "NCIT:C157179", "label": "FGFR1 Mutation Analysis" } }
@@ -121,14 +121,14 @@
       "description": "List of phenotypic abnormalities of the sample. RECOMMENDED.",
       "type": "array",
       "items": {
-        "$ref": "../common/phenotypicFeature.json"
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/phenotypicFeature.json"
       }
     },
     "measurements": {
       "description": "List of measurements of the sample.",
       "type": "array",
       "items": {
-        "$ref": "../common/measurement.json"
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/measurement.json"
       }
     },
     "sampleProcessing": {

@@ -1,5 +1,5 @@
 {
-  "$schema": "../defaultSchema.json",
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/genomicVariations/defaultSchema.json",
   "variantInternalId": "GRCh37-1-55505652-G-A",
   "variantType": "SNP",
   "alternateBases": "A",

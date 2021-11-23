@@ -4,7 +4,7 @@
   "description": "Definition of a value class.",
   "type": "object",
   "oneOf": [
-    { "$ref" : "./quantity.json" },
+    { "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/quantity.json" },
     { "$ref" : "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json" }
   ]
 }

@@ -7,12 +7,12 @@
   "properties": {
     "age": {
       "description": "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
-      "$ref": "./age.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/age.json",
       "example": "P32Y6M1D"
     },
     "ageRange": {
       "description": "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
-      "$ref": "./ageRange.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/ageRange.json",
       "example": {
         "start": "P18Y",
         "end": "P59Y"

@@ -14,11 +14,18 @@
     },
     "measurementValue": {
       "description": "The result of the measurement",
-      "oneOf": [{ "$ref": "./value.json" }, { "$ref": "./complexValue.json" }]
+      "oneOf": [
+        {
+          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/value.json"
+        },
+        {
+          "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/complexValue.json"
+        }
+      ]
     },
     "observationMoment": {
       "description": "Moment in time at which measurement was performed. RECOMMENDED.",
-      "$ref": "./timeElement.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/timeElement.json",
       "example": {
         "age": {
           "iso8601duration": "P53Y8M"
@@ -32,7 +39,7 @@
     },
     "procedure": {
       "description": "Clinical procedure performed to acquire the sample used for the measurement",
-      "$ref": "./procedure.json",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-v2-Models/main/BEACON-V2-draft4-Model/common/procedure.json",
       "example": {
         "code": {
           "id": "NCIT:C5189",

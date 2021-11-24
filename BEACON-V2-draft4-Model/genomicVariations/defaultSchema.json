@@ -141,7 +141,9 @@
     "MolecularAttributes": {
       "geneIds": {
         "type": "array",
-        "items": "string"
+        "items": {
+          "type": "string"
+        }
       },
       "genomicFeatures": {
         "description": "List of Genomic feature(s) affected by the variant.",

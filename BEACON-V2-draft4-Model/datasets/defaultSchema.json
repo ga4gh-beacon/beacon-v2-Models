@@ -6,15 +6,18 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier of the dataset"
+      "description": "Unique identifier of the dataset",
+      "examples": ["ds01010101"]
     },
     "name": {
       "type": "string",
-      "description": "Name of the dataset"
+      "description": "Name of the dataset",
+      "examples": ["Dataset with synthetic data"]
     },
     "description": {
       "type": "string",
-      "description": "Description of the dataset"
+      "description": "Description of the dataset",
+      "examples": ["This dataset provides examples of the actual data in this Beacon instance."]
     },
     "createDateTime": {
       "type": "string",
@@ -30,12 +33,13 @@
     },
     "version": {
       "type": "string",
-      "description": "Version of the dataset"
+      "description": "Version of the dataset",
+      "examples": ["v1.1"]
     },
     "externalUrl": {
       "type": "string",
       "description": "URL to an external system providing more dataset information (RFC 3986 format).",
-      "example": "http://example.org/wiki/Main_Page"
+      "examples": ["http://example.org/wiki/Main_Page"]
     },
     "info": {
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"
@@ -77,7 +81,7 @@
           "properties": {
             "version": {
               "type": "string",
-              "example": "17-07-2016"
+              "examples": ["17-07-2016"]
             },
             "modifiers": {
               "type": "array",
@@ -87,7 +91,7 @@
                     "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
                   },
                   {
-                    "example": [
+                    "examples": [
                       {
                         "id": "EFO:0001645"
                       },
@@ -102,7 +106,7 @@
           }
         }
       ],
-      "example": [
+      "examples": [
         {
           "id": "DUO:0000007",
           "label": "disease specific research",

@@ -142,7 +142,7 @@
           "LRG 199p1:p.Val25Gly (preferred)"
         ]
       },
-      "clinVarVariantId": {
+      "clinvarVariantId": {
         "description": "ClinVar variant id. Other id values used by ClinVar can be added to `variantAlternativeIds`",
         "pattern": "^(clinvar:)?\d+$",
         "type": "string",

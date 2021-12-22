@@ -104,13 +104,20 @@
     },
     "Identifiers": {
       "variantAlternativeIds": {
-        "description": "List of cross-referencing ID(s), for the variant in other databases (e.g. dbSNP, clinVarId, ClinGen, COSMIC), , preferably CURIE(s) where available, e.g. 'VCV000055583.1', 'ClinGen:CA003410'.",
+        "description": "List of cross-referencing ID(s), for the variant in other databases (e.g. dbSNP, ClinVar, ClinGen, COSMIC), as `externalReferences` with CURIE(s).",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "../common/externalReference.json"
         },
         "examples": [
-          ["dbSNP:rs3975092470", "ClinGen:CA003410", "VCV000055583.1"]
+          [
+            {"id": "dbSNP:rs587780345", "reference": "https://www.ncbi.nlm.nih.gov/snp/rs587780345", "notes": "dbSNP id"},
+            {"id": "ClinGen:CA152954", "reference": "http://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA152954", "notes": "ClinGen Allele Registry id"},
+            {"id": "UniProtKB:P35557#VAR_003699", "reference": "https://www.uniprot.org/uniprot/P35557#VAR_003699"}
+          ],
+          [
+            {"id": "OMIM:164757.0001", "reference": "https://www.omim.org/entry/164757#0001"},
+          ]
         ]
       },
       "genomicHGVSId": {
@@ -139,9 +146,11 @@
           ["LRG 199p1:p.Val25Gly (preferred)"]
         ]
       },
-      "clinVarIds": {
+      "clinvarVariantId": {
+        "description": "ClinVar variant id. Other id values used by ClinVar can be added to `variantAlternativeIds`",
+        "pattern": "^(clinvar:)?\d+$",
         "type": "string",
-        "examples": ["RCV000009910.19", "9325", "VCV000009325.28"]
+        "examples": ["clinvar:12345", "9325"]
       }
     },
     "MolecularAttributes": {

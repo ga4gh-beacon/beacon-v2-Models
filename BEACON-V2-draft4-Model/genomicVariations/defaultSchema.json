@@ -116,7 +116,7 @@
             {"id": "UniProtKB:P35557#VAR_003699", "reference": "https://www.uniprot.org/uniprot/P35557#VAR_003699"}
           ],
           [
-            {"id": "OMIM:164757.0001", "reference": "https://www.omim.org/entry/164757#0001"},
+            {"id": "OMIM:164757.0001", "reference": "https://www.omim.org/entry/164757#0001"}
           ]
         ]
       },
@@ -148,7 +148,7 @@
       },
       "clinvarVariantId": {
         "description": "ClinVar variant id. Other id values used by ClinVar can be added to `variantAlternativeIds`",
-        "pattern": "^(clinvar:)?\d+$",
+        "pattern": "^(clinvar:)?\\d+$",
         "type": "string",
         "examples": ["clinvar:12345", "9325"]
       }

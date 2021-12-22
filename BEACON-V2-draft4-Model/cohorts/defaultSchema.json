@@ -21,7 +21,8 @@
     },
     "cohortId": {
       "description": "Cohort identifier. For ´study-defined´ or ´beacon-defined´cohorts this field is set by the implementer. For ´user-defined´ this unique identifier could be generated upon the query that defined the cohort, but could be later edited by the user.",
-      "type": "string"
+      "type": "string",
+      "examples": ["cohort-T2D-2010"]
     },
     "cohortName": {
       "description": "Name of the cohort. For ´user-defined´ this field could be generated upon the query, e.g. a value that is a concatenationor some representation of the user query.",
@@ -72,7 +73,7 @@
           "description": "date of collection event/data point",
           "type": "string",
           "format": "datetime",
-          "examples": ["2018-10-1", "2019-04-23", "2020-09-11"]
+          "examples": ["2018-10-01T13:23:45Z", "2019-04-23T09:11:13Z", "2017-01-17T20:33:40Z"]
         },
         "eventTimeline": {
           "description": "Aggregated information of dates of visit/diagnostic/inclusion in study obtained from individual level info in database. Will coincide with collection event date for multi-time",
@@ -81,12 +82,14 @@
             "start": {
               "description": "earliest date of visit",
               "type": "string",
-              "format": "datetime"
+              "format": "datetime",
+              "examples": ["2018-10-01T13:23:45Z", "2019-04-23T09:11:13Z", "2017-01-17T20:33:40Z"]
             },
             "end": {
               "description": "latest date of visit",
               "type": "string",
-              "format": "datetime"
+              "format": "datetime",
+              "examples": ["2018-10-01T13:23:45Z", "2019-04-23T09:11:13Z", "2017-01-17T20:33:40Z"]
             }
           }
         },

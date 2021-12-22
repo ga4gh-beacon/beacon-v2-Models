@@ -133,12 +133,11 @@
           "LRG 199p1:p.Val25Gly (preferred)"
         ]
       },
-      "clinVarIds": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "example": ["RCV000009910.19", "9325", "VCV000009325.28"]
+      "clinVarVariantId": {
+        "description": "ClinVar variant id. Other id values used by ClinVar can be added to `variantAlternativeIds`",
+        "pattern": "^(clinvar:)?\d+?$",
+        "type": "string",
+        "examples": ["clinvar:12345", "9325"]
       }
     },
     "MolecularAttributes": {

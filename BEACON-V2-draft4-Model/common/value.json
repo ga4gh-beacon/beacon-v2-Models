@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Value",
-  "description": "Definition of a value class.",
+  "description": "Definition of a value class. Provenance: GA4GH Phenopackets v2 `Value`",
   "type": "object",
   "oneOf": [
     { "$ref" : "./quantity.json" },

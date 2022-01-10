@@ -35,7 +35,7 @@
       "examples": ["T","G","N","AG", ""]
     },
     "location": {
-      "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#/definitions/Location"
+      "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Location"
     },
     "identifiers": {
       "$ref": "#/definitions/Identifiers"

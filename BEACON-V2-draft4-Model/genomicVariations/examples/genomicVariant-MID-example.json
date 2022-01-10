@@ -4,10 +4,21 @@
   "variantType": "SNP",
   "referenceBases": "G",
   "alternateBases": "A",
-  "position": {
-    "assemblyId": "GRCh38",
-    "refseqId": "chr1",
-    "start": [55039979]
+  "location": {
+    "type": "SequenceLocation",
+        "interval": {
+          "type": "SequenceInterval",
+          "start": {
+            "type": "Number",
+            "value": 55039979
+          },
+          "end": {
+            "type": "Number",
+            "value": 55039980
+          },
+        },
+        "sequenceId": "refseq:NC_000001.11",
+        "start": [55039979]
   },
   "identifiers": {
     "variantAlternativeIds": ["dbSNP:rs3975092470","ClinGen: CA340482854"],

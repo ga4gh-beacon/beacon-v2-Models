@@ -8,7 +8,7 @@
     "variantInternalId",
     "variantType",
     "alternateBases",
-    "position"
+    "location"
   ],
   "properties": {
     "variantInternalId": {
@@ -34,8 +34,8 @@
       "pattern": "^([ACGTUNRYSWKMBDHV\\-\\.]*)$",
       "examples": ["T","G","N","AG", ""]
     },
-    "position": {
-      "$ref": "#/definitions/Position"
+    "location": {
+      "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#/definitions/Location"
     },
     "identifiers": {
       "$ref": "#/definitions/Identifiers"
@@ -61,47 +61,6 @@
     }
   },
   "definitions": {
-    "Position": {
-      "type": "object",
-      "description": "This section groups all attributes that allows to identify a variant via its position in the genome.",
-      "properties": {
-        "assemblyId": {
-          "description": "Genomic assembly accession and version as RefSqeq assembly accession (e.g. 'GCF_000001405.39') or a versioned assembly name or synonym such as UCSC Genome Browser assembly (e.g. 'hg38') or Genome Reference Consortium Human (e.g. 'GRCh38.p13') names.",
-          "type": "string",
-          "examples": ["GCF_000001405.39", "hg38", "GRCh38.p13"]
-        },
-        "refseqId": {
-          "description": "Reference sequence id for genomic reference sequence in which variant coordinates are given, e.g. 'NC_000009' for human chromosome 9. Preferably the RefSeqId, alternatively, names, synonymous or aliases e.g. 'Chr9' could be used.",
-          "type": "string",
-          "examples": ["NC_000009", "Chr9", "NC_012920.1"]
-        },
-        "start": {
-          "description": "Precise or fuzzy start coordinate position(s) of the genomic variation (0-based, inclusive).",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64",
-            "minimum": 0
-          },
-          "minItems": 1,
-          "maxItems": 2,
-          "examples": [[1000], [1000,1100]]
-        },
-        "end": {
-          "description": "Precise or bracketing the end of the variant, for variants not specified by their sequence content (e.g. structural variants, particularly CNVs).",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64",
-            "minimum": 1
-          },
-          "minItems": 0,
-          "maxItems": 2,
-          "examples": [[], [1200], [1200,1350]]
-        }
-      },
-      "required": ["assemblyId", "refseqId", "start"]
-    },
     "Identifiers": {
       "variantAlternativeIds": {
         "description": "List of cross-referencing ID(s), for the variant in other databases (e.g. dbSNP, ClinVar, ClinGen, COSMIC), as `externalReferences` with CURIE(s).",

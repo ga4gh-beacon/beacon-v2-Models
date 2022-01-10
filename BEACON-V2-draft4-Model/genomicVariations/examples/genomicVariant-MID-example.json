@@ -18,7 +18,6 @@
           },
         },
         "sequenceId": "refseq:NC_000001.11",
-        "start": [55039979]
   },
   "identifiers": {
     "variantAlternativeIds": ["dbSNP:rs3975092470","ClinGen: CA340482854"],

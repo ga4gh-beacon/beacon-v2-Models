@@ -1,9 +1,25 @@
 {
   "$schema": "../defaultSchema.json",
   "variantInternalId": "var123",
-  "variantType": "SNP",
-  "referenceBases": "G",
-  "alternateBases": "A",
+  "variation":{
+    "variantType": "SNP",
+    "referenceBases": "G",
+    "alternateBases": "A",
+    "location": {
+       "type": "SequenceLocation",
+       "interval": {
+         "type": "SequenceInterval",
+         "start": {
+           "type": "Number",
+           "value": 55039979
+         },
+         "end": {
+           "type": "Number",
+           "value": 55039980
+         },
+       },
+       "sequenceId": "refseq:NC_000001.11"
+  },
   "position": {
     "assemblyId": "GRCh38",
     "refseqId": "chr1",

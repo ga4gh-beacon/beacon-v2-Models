@@ -2,8 +2,11 @@
   "$schema": "../defaultSchema.json",
   "variantInternalId": "GRCh37-1-55505652-G-A",
   "variation":{
-    "variantType": "SNP",
-    "alternateBases": "A",
+    "state": {
+      "sequence": "A",
+      "type": "SequenceState"
+    },
+    "type": "Allele",
     "location": {
        "type": "SequenceLocation",
        "interval": {

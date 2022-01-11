@@ -4,7 +4,7 @@
   "description": "Class describing a clinical procedure or intervention. Provenance: GA4GH Phenopackets v2 `Procedure`",
   "type": "object",
   "properties": {
-    "procedureCode": {
+    "code": {
       "description": "Clinical procedure performed with recommended values from Medical Action Ontology (MAXO) 'Medical action' term tree (MAXO:0000001). Compares to Phenopackets v2 `Procedure.code`",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "examples": [
@@ -27,10 +27,10 @@
       "format": "date",
       "example": "2010-07-10"
     },
-    "ageAtProcedure": {
+    "performed": {
       "description": "Compares to Phenopackets v2 `Procedure.performed`",
       "$ref": "./timeElement.json"
     }
   },
-  "required": ["procedureCode"]
+  "required": ["code"]
 }

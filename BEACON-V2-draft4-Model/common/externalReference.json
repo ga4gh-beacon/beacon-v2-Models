@@ -14,7 +14,7 @@
       "type": "string",
       "example": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8155688/"
     },
-    "notes" : {
+    "description" : {
       "description": "An optional text descriptor. Renamed compared to GA4GH Phenopackets v2 `ExternalReference.description`",
       "type": "string",
       "example": "Signatures of Discriminative Copy Number Aberrations in 31 Cancer Subtypes"

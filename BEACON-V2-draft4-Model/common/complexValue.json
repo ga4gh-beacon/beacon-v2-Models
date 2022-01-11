@@ -15,7 +15,7 @@
   "definitions": {
     "TypedQuantity": {
       "properties" : {
-        "quantityType" : {
+        "type" : {
           "description" : "OntologyClass to describe the type of the measurement. Renamed compared to GA4GH Phenopackets v2 `ComplexValue.TypedQuantity.type`",
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
           "example" : {

@@ -2,8 +2,8 @@
   "openapi": "3.0.2",
   "servers": [],
   "info": {
-    "version": "2.0.0-draft.4",
-    "title": "GA4GH Beacon API Specification - Cohorts Endpoints",
+    "version": "2.0.0",
+    "title": "GA4GH Beacon API Specification - Runs Endpoints",
     "description": "TBD",
     "contact": {
       "email": "beacon@ga4gh.org"
@@ -13,70 +13,107 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "tags": [
-    {"name": "GET Endpoints",
-      "description": "Available endpoints in this API. All of them have a POST counterpart."
-    },
-    {"name": "POST Endpoints",
-      "description": "The same operations than GET, just by POST."
-    }
-
-  ],
   "paths": {
-    "/cohorts": {
+    "/runs": {
+      "get": {
+        "parameters": [
+          { "$ref": "#/components/parameters/requestedSchema" },
+          { "$ref": "#/components/parameters/skip" },
+          { "$ref": "#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/includeResultsetResponses" }
+        ],
+        "description": "Get a list of sequencing runs",
+        "operationId": "getRuns",
+        "tags": ["GET Endpoints"],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ResultsOKResponse"
+          },
+          "default": {
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      },
+      "post": {
+        "description": "Get a list of sequencing runs",
+        "operationId": "postRunsRequest",
+        "tags": ["POST Endpoints"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ResultsOKResponse"
+          },
+          "default": {
+            "description": "An unsuccessful operation",
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      }
+    },
+    "/runs/{id}": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
+      "get": {
+        "description": "Get details about one sequencing run, identified by its (unique) 'id'",
+        "operationId": "getOneRun",
+        "tags": ["GET Endpoints"],
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ResultsOKResponse"
+          },
+          "default": {
+            "description": "An unsuccessful operation",
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      },
+      "post": {
+        "description": "Get details about one Run, identified by its (unique) 'id'",
+        "operationId": "postOneRun",
+        "tags": ["POST Endpoints"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ResultsOKResponse"
+          },
+          "default": {
+            "description": "An unsuccessful operation",
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      }
+    },
+    "/runs/{id}/g_variants": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get a list of cohorts",
-        "operationId": "getCohorts",
-        "tags": [ "GET Endpoints" ],
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/CollectionsResponse"
-          },
-          "default":{
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      },
-      "post": {
-        "description": "Get a list of cohorts",
-        "operationId": "postCohortsRequest",
-        "tags": [ "POST Endpoints" ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/CollectionsResponse"
-          },
-          "default": {
-            "description": "An unsuccessful operation",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      }
-    },
-    "/cohorts/{id}": {
-      "parameters": [
-        { "$ref":"#/components/parameters/entryId" }
-      ],
-      "get": {
-        "parameters": [
-          { "$ref":"#/components/parameters/requestedSchema" }
-        ],
-        "description": "Get details about one cohort, identified by its (unique) 'id'",
-        "operationId": "getOneCohort",
+        "description": "Get the genomic variants list from one run, identified by its (unique) 'id'",
+        "operationId": "getOneRunGenomicVariants",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -89,8 +126,8 @@
         }
       },
       "post": {
-        "description": "Get details about one cohort, identified by its (unique) 'id'",
-        "operationId": "postOneCohort",
+        "description": "Get the genomic variants list from one run, identified by its (unique) 'id'",
+        "operationId": "potOneRunGenomicVariants",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {
@@ -113,7 +150,7 @@
         }
       }
     },
-    "/cohorts/{id}/individuals": {
+    "/runs/{id}/analyses": {
       "parameters": [
         { "$ref":"#/components/parameters/entryId" }
       ],
@@ -123,8 +160,8 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the individuals from one cohort, identified by its (unique) 'id'",
-        "operationId": "getOneCohortIndividuals",
+        "description": "Get the analysis list from one sequencing run, identified by its (unique) 'id'",
+        "operationId": "getOneRunAnalysis",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -137,8 +174,8 @@
         }
       },
       "post": {
-        "description": "Get the individuals from one cohort, identified by its (unique) 'id'",
-        "operationId": "postOneCohortEntries",
+        "description": "Get the analysis list from one sequencing run, identified by its (unique) 'id'",
+        "operationId": "postOneRunAnalysis",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {
@@ -153,70 +190,6 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/ResultsOKResponse"
-          },
-          "default": {
-            "description": "An unsuccessful operation",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      }
-    },
-    "/cohorts/{id}/filtering_terms": {
-      "parameters": [
-        { "$ref":"#/components/parameters/entryId" }
-      ],
-     "get": {
-        "parameters": [
-          { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" }
-        ],
-        "description": "Get the list of filtering terms that could be used with a given cohort, identified by its (unique) 'id'",
-        "operationId": "getOneCohortFilteringTerms",
-        "tags": [ "GET Endpoints" ],
-
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconFilteringTermsResponse.json"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "An unsuccessful operation",
-            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
-          }
-        }
-      },
-      "post": {
-        "description": "Get the list of filtering terms that could be used with a given cohort, identified by its (unique) 'id'",
-        "operationId": "postOneCohortFilteringTerms",
-        "tags": [ "POST Endpoints" ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": 
-              {
-                "schema":{
-                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconFilteringTermsResponse.json"
-                }
-              }
-            }
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -241,20 +214,6 @@
             }
           }
         }
-      },
-      "CollectionsResponse": {
-        "description": "Successful collection list operation.",
-        "content": {
-          "application/json": {
-            "schema":{
-              "oneOf": [
-                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconBooleanResponse.json" },
-                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconCountResponse.json" },
-                { "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconCollectionsResponse.json" }
-              ]
-            }
-          }
-        }
       }
     },
     "parameters": {
@@ -271,23 +230,42 @@
       "skip": {
         "name": "skip",
         "in": "query",
-        "schema":{
+        "schema": {
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Skip"
         }
       },
       "limit": {
         "name": "limit",
         "in": "query",
-        "schema":{
+        "schema": {
           "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Limit"
         }
+      },
+      "includeResultsetResponses": {
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
       },
       "entryId": {
         "name": "id",
         "in": "path",
         "required": true,
-        "schema":{
-          "type":"string"
+        "schema": {
+          "type": "string"
+        }
+      },
+      "individualId": {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "biosampleId": {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string"
         }
       }
     }

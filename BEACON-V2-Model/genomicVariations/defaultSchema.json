@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Genomic Variation",
-  "$comment": "version: ga4gh-beacon-variant-v2.0.0-draft.4",
+  "$comment": "version: ga4gh-beacon-variant-v2.0.0",
   "description": "Schema for a genomic variant entry.",
   "type": "object",
   "required": [

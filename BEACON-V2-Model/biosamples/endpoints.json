@@ -2,8 +2,8 @@
   "openapi": "3.0.2",
   "servers": [],
   "info": {
-    "version": "2.0.0-draft.4",
-    "title": "GA4GH Beacon API Specification - Genomic Variations Endpoints",
+    "version": "2.0.0",
+    "title": "GA4GH Beacon API Specification - Biosamples endpoints",
     "description": "TBD",
     "contact": {
       "email": "beacon@ga4gh.org"
@@ -14,19 +14,16 @@
     }
   },
   "paths": {
-    "/g_variants": {
+    "/biosamples": {
       "get": {
         "parameters": [
           { "$ref": "#/components/parameters/requestedSchema" },
           { "$ref": "#/components/parameters/skip" },
           { "$ref": "#/components/parameters/limit" },
-          { "$ref": "#/components/parameters/includeResultsetResponses" },
-          { "$ref": "#/components/parameters/genomicAlleleShortForm" },
-          { "$ref": "#/components/parameters/geneId" },
-          { "$ref": "#/components/parameters/aminoacidChange" }
+          { "$ref": "#/components/parameters/includeResultsetResponses" }
         ],
-        "description": "Get a list of example entries",
-        "operationId": "getExampleEntries",
+        "description": "Get a list of biosamples",
+        "operationId": "getBiosamples",
         "tags": ["GET Endpoints"],
         "responses": {
           "200": {
@@ -38,8 +35,8 @@
         }
       },
       "post": {
-        "description": "Get a list of example entries",
-        "operationId": "postExampleEntriesRequest",
+        "description": "Get a list of biosamples",
+        "operationId": "postBiosamplesRequest",
         "tags": ["POST Endpoints"],
         "requestBody": {
           "content": {
@@ -62,13 +59,13 @@
         }
       }
     },
-    "/g_variants/{id}": {
+    "/biosamples/{id}": {
       "parameters": [
         { "$ref":"#/components/parameters/entryId" }
       ],
       "get": {
-        "description": "Get details about one dummyEntry, identified by its (unique) 'id'",
-        "operationId": "getOneExampleEntry",
+        "description": "Get details about one biosample, identified by its (unique) 'id'",
+        "operationId": "getOneBiosample",
         "tags": ["GET Endpoints"],
         "responses": {
           "200": {
@@ -81,8 +78,8 @@
         }
       },
       "post": {
-        "description": "Get details about one dummyEntry, identified by its (unique) 'id'",
-        "operationId": "postOneExampleEntry",
+        "description": "Get details about one Biosample, identified by its (unique) 'id'",
+        "operationId": "postOneBiosample",
         "tags": ["POST Endpoints"],
         "requestBody": {
           "content": {
@@ -105,7 +102,7 @@
         }
       }
     },
-    "/g_variants/{id}/biosamples": {
+    "/biosamples/{id}/g_variants": {
       "parameters": [
         { "$ref":"#/components/parameters/entryId" }
       ],
@@ -115,8 +112,8 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'",
-        "operationId": "getOneGenomicVariantBiosamples",
+        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'",
+        "operationId": "getOneBiosampleGenomicVariants",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -129,8 +126,8 @@
         }
       },
       "post": {
-        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'",
-        "operationId": "postOneGenomicVariantBiosamples",
+        "description": "Get the genomic variants list from one biosample, identified by its (unique) 'id'",
+        "operationId": "postOneBiosampleGenomicVariants",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {
@@ -153,7 +150,7 @@
         }
       }
     },
-    "/g_variants/{id}/individuals": {
+    "/biosamples/{id}/analyses": {
       "parameters": [
         { "$ref":"#/components/parameters/entryId" }
       ],
@@ -163,8 +160,8 @@
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
         ],
-        "description": "Get the individuals list from one genomic variant, identified by its (unique) 'id'",
-        "operationId": "getOneGenomicVariantIndividuals",
+        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'",
+        "operationId": "getOneBiosampleAnalysis",
         "tags": [ "GET Endpoints" ],
         "responses": {
           "200": {
@@ -177,8 +174,8 @@
         }
       },
       "post": {
-        "description": "Get the biosamples list from one genomic variant, identified by its (unique) 'id'",
-        "operationId": "postOneGenomicVariantIndividuals",
+        "description": "Get the analysis list from one biosample, identified by its (unique) 'id'",
+        "operationId": "postOneBiosampleAnalysis",
         "tags": [ "POST Endpoints" ],
         "requestBody": {
           "content": {
@@ -193,6 +190,70 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/ResultsOKResponse"
+          },
+          "default": {
+            "description": "An unsuccessful operation",
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      }
+    },
+    "/biosamples/{id}/runs": {
+      "parameters": [
+        { "$ref":"#/components/parameters/entryId" }
+      ],
+      "get": {
+        "parameters": [
+          { "$ref":"#/components/parameters/requestedSchema" },
+          { "$ref":"#/components/parameters/skip" },
+          { "$ref":"#/components/parameters/limit" }
+        ],
+        "description": "Get the runs list from one biosample, identified by its (unique) 'id'",
+        "operationId": "getOneBiosampleRuns",
+        "tags": [ "GET Endpoints" ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json":
+              {
+                "schema":{
+                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "An unsuccessful operation",
+            "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconErrorResponse.json"
+          }
+        }
+      },
+      "post": {
+        "description": "Get the runs list from one biosample, identified by its (unique) 'id'",
+        "operationId": "postOneBiosampleRuns",
+        "tags": [ "POST Endpoints" ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/beaconRequestBody.json"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json":
+              {
+                "schema":{
+                  "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/responses/beaconResultsetsResponse.json"
+                }
+              }
+            }
           },
           "default": {
             "description": "An unsuccessful operation",
@@ -254,30 +315,6 @@
         "schema": {
           "type": "string"
         }
-      },
-      "genomicAlleleShortForm": {
-        "name": "allele",
-        "in": "query",
-        "schema": {
-          "type": "string"
-        },
-        "example": "NM_004006.2:c.4375C>T"
-      },
-      "geneId": {
-        "name": "geneid",
-        "in": "query",
-        "schema": {
-          "type": "string"
-        },
-        "example": "BRAF"
-      },
-      "aminoacidChange": {
-        "name": "aminoacidchange",
-        "in": "query",
-        "schema": {
-          "type": "string"
-        },
-        "example": "V600E"
       }
     }
   }

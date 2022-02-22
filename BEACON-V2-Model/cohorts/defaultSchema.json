@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$comment": "version: ga4gh-beacon-cohort-v2.0.0-draft.4",
+  "$comment": "version: ga4gh-beacon-cohort-v2.0.0",
   "description": "A cohort available in the beacon.",
   "type": "object",
   "properties": {

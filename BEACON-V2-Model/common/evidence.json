@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Evidence",
-  "description": "Definition of an evidence class.",
+  "description": "Definition of an evidence class. Provenance: GA4GH Phenopackets v2 `Evidence`",
   "type": "object",
   "properties": {
     "evidenceCode" : {

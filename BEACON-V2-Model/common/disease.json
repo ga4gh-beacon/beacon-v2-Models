@@ -16,9 +16,9 @@
     "ageOfOnset": {
       "$ref": "./timeElement.json",
       "examples": [
-        { "ageGroup": { "id": "NCIT:C49685", "label": "Adult 18-65 Years Old" }, "age": "P32Y6M1D"},
-        { "ageRange": { "start": "P18Y", "end": "P59Y" } },
-        { "age": "P2M4D"}
+        { "ageGroup": { "id": "NCIT:C49685", "label": "Adult 18-65 Years Old" }, "age": { "iso8601duration": "P32Y6M1D" } },
+        { "ageRange": { "start": { "iso8601duration": "P18Y" }, "end": { "iso8601duration": "P59Y" } } },
+        { "age": { "iso8601duration": "P2M4D" } }
       ]
     },
     "stage": {

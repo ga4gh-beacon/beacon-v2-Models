@@ -8,14 +8,14 @@
     "age": {
       "description": "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
       "$ref": "./age.json",
-      "example": "P32Y6M1D"
+      "example": {"iso8601duration": "P32Y6M1D" }
     },
     "ageRange": {
       "description": "Represents age as a ISO8601 duration (e.g., P40Y10M05D).",
       "$ref": "./ageRange.json",
       "example": {
-        "start": "P18Y",
-        "end": "P59Y"
+        "start": { "iso8601duration": "P18Y" },
+        "end": { "iso8601duration": "P59Y" }
       }
     },
     "ageGroup": {

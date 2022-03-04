@@ -4,8 +4,8 @@
   "description": "Definition of a quantity class. Provenance: GA4GH Phenopackets v2 `Quantity`",
   "type": "object",
   "properties": {
-    "units": {
-      "$ref": "./commonDefinitions.json#/definitions/Units"
+    "unit": {
+      "$ref": "./commonDefinitions.json#/definitions/Unit"
     },
     "value": {
       "description": "The value of the quantity in the units",

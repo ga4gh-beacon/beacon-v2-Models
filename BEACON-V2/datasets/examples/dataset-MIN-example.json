@@ -1,0 +1,5 @@
+{ 
+  "$schema": "../defaultSchema.json",
+  "id": "ds01010101",
+  "name": "Dataset with synthetic data"
+}

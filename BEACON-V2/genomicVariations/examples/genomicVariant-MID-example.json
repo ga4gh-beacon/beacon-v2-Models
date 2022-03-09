@@ -16,9 +16,10 @@
          "end": {
            "type": "Number",
            "value": 55039980
-         },
+         }
        },
        "sequenceId": "refseq:NC_000001.11"
+    }
   },
   "position": {
     "assemblyId": "GRCh38",

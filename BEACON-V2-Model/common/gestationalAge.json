@@ -8,12 +8,12 @@
     "weeks": {
       "description": "Completed weeks of gestation according to the above definition.",
       "type": "integer",
-      "example": [ 4, 33 ]
+      "examples": [ 4, 33 ]
     },
     "days": {
       "description": "Days beyond the completed weeks, if available.",
       "type": "integer",
-      "example": [ 2, 4 ]
+      "examples": [ 2, 4 ]
     }
   },
   "required": [ "weeks" ]

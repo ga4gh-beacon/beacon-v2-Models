@@ -19,6 +19,6 @@
       "examples": [ { "id": "NCIT:C64496", "label": "Twice Daily" } ]
     }
   },
-  "required": ["unit", "value"],
-  "additionalProperties": true
+  "required": ["quantity", "interval", "scheduleFrequency"],
+  "additionalProperties": false
 }

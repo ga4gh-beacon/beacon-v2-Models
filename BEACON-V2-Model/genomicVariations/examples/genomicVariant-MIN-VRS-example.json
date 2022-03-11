@@ -1,7 +1,7 @@
 {
   "$schema": "../defaultSchema.json",
   "variantInternalId": "GRCh37-1-55505652-G-A",
-  "variation":{
+  "variation": {
     "state": {
       "sequence": "A",
       "type": "SequenceState"

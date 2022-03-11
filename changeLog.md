@@ -3,6 +3,14 @@ This document is planned as a manually maintained list of changes to the Beacon 
 It should only include changes that affect or could affect implementations, and the log would be updated *after* the corresponding pull request is approved and merged.
 This log only include the changes added after December, 1st 2021.
 
+### 2022-03-11: More Phenopackets alignments [PR #84](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/84) && [PR #85](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/85)
+
+This follows some discussions with Phenopackets developers (@pnrobinson & @julsejacobsen) and a general 
+agreement "to adopt as good as possible for easier re-use though understood not to be Phenopackets _per se_".
+
+* `gestationalAge`
+* modification of `treatment` and dependencies
+
 ### 2022-03-08: Re-structuring `genomicVariation` for VRS compatibility [PR #72](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/72)
 
 This modification allows the use of VRS variation classes, while also keeping an updated version of the current Beacon schema (using VRS `location` instead of the legacy `position`) as an option. This proposal addresses feedback from the GA4GH PRC process.

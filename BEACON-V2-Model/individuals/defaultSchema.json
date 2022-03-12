@@ -15,7 +15,7 @@
       "$ref": "../common/commonDefinitions.json#/definitions/Sex"
     },
     "karyotypicSex": {
-      "description": "The chromosomal sex of an individual represented as ordinal values.",
+      "description": "The chromosomal sex of an individual represented from a selection of options.",
       "$ref": "../common/commonDefinitions.json#/definitions/KaryotypicSex"
     },
     "ethnicity": {

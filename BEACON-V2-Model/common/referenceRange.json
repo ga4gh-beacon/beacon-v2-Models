@@ -20,6 +20,6 @@
       "examples": [135]
     }
   },
-  "required": ["low", "high"],
+  "required": ["unit", "low", "high"],
   "additionalProperties": true
 }

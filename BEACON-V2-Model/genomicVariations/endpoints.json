@@ -67,8 +67,8 @@
         { "$ref":"#/components/parameters/entryId" }
       ],
       "get": {
-        "description": "Get details about one dummyEntry, identified by its (unique) 'id'",
-        "operationId": "getOneExampleEntry",
+        "description": "Get details about one genomic variation, identified by its (unique) 'id'",
+        "operationId": "getOneGenomicVariation",
         "tags": ["GET Endpoints"],
         "responses": {
           "200": {
@@ -81,8 +81,8 @@
         }
       },
       "post": {
-        "description": "Get details about one dummyEntry, identified by its (unique) 'id'",
-        "operationId": "postOneExampleEntry",
+        "description": "Get details about one genomic variation, identified by its (unique) 'id'",
+        "operationId": "postOneGenomicVariation",
         "tags": ["POST Endpoints"],
         "requestBody": {
           "content": {

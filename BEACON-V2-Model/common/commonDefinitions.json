@@ -42,17 +42,6 @@
         { "id": "GAZ:00000460", "label": "Eurasia" }
       ]
     },
-    "SeverityLevel": {
-      "description": "Level/severity ontology when and as applicable to phenotype observed. Value from Human Phenotype Ontology (HP:0012824), e.g `mild`. The intensity or degree of a manifestation. [ HPO:probinson ] ",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
-      "examples": [
-        { "id": "HP:0012825", "label": "Severe" },
-        { "id": "HP:0012829", "label": "Profound" },
-        { "id": "HP:0012826", "label": "Moderate" },
-        { "id": "HP:0012825", "label": "Mild" },
-        { "id": "HP:0012827", "label": "Bordeline" }
-      ]
-    },
     "Unit": {
       "description": "The kind of unit. Recommended from NCIT Unit of Category ontology term (NCIT:C42568) descendants",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",

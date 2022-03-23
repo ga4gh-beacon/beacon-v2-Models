@@ -8,19 +8,19 @@
     },
     "type": "Allele",
     "location": {
-       "type": "SequenceLocation",
-       "interval": {
-         "type": "SequenceInterval",
-         "start": {
-           "type": "Number",
-           "value": 5505652
-         },
-         "end": {
-           "type": "Number",
-           "value": 5505653
-         },
-       },
-       "sequenceId": "refseq:NC_000001.10"
+      "type": "SequenceLocation",
+      "interval": {
+        "type": "SequenceInterval",
+        "start": {
+          "type": "Number",
+          "value": 5505652
+        },
+        "end": {
+          "type": "Number",
+          "value": 5505653
+        }
+      },
+      "sequenceId": "refseq:NC_000001.10"
     }
   }
 }

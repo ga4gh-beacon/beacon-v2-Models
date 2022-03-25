@@ -199,9 +199,6 @@
       }
     },
     "/individuals/filtering_terms": {
-      "parameters": [
-        { "$ref":"#/components/parameters/entryId" }
-      ],
       "get": {
         "parameters": [
           { "$ref":"#/components/parameters/skip" },

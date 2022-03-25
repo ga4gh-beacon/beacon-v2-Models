@@ -3,6 +3,17 @@ This document is planned as a manually maintained list of changes to the Beacon 
 It should only include changes that affect or could affect implementations, and the log would be updated *after* the corresponding pull request is approved and merged.
 This log only include the changes added after December, 1st 2021.
 
+### 2022-03-11/2022-03-25: removing 'cohort' prefix from some cohort properties [issue #102](https://github.com/ga4gh-beacon/beacon-v2-Models/issues/102) 
+
+Adapting the default schema for cohorts to the style used in property names for other entry types
+
+* `cohortId` to `id`
+* `cohortName` to `name`
+* `cohortInclusionCriteria` to `inclusionCriteria`
+* `cohortExclusionCriteria` to `exclusionCriteria`
+
+The properties that could be misleading if the prefix was removed like `type` or `size` are keeping the prefix.
+
 ### 2022-03-11/2022-03-14: More Phenopackets alignments [PR #84](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/84) && [PR #85](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/85) && [PR #86](https://github.com/ga4gh-beacon/beacon-v2-Models/pull/86) 
 
 This follows some discussions with Phenopackets developers (@pnrobinson & @julsejacobsen) and a general 

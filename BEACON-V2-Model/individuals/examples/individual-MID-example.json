@@ -26,7 +26,7 @@
         }
       },
       "familyHistory": false,
-      "severityLevel": {
+      "severity": {
         "id": "HP:0012829",
         "label": "Profound"
       },

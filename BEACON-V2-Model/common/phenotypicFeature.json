@@ -41,8 +41,12 @@
       "description": "The evidence for an assertion of the observation of a type. RECOMMENDED.",
       "$ref": "./evidence.json"
     },
-    "severityLevel": {
-      "$ref": "./commonDefinitions.json#/definitions/SeverityLevel"
+    "severity": {
+      "$ref": "./commonDefinitions.json#/definitions/SeverityLevel",
+      "examples": [
+        { "id": "HP:0012828", "label": "Severe" },
+        { "id": "HP:0012826", "label": "Moderate" }
+      ]
     },
     "notes": {
       "description": "Unstructured text to describe additional properties of this phenotypic feature.",

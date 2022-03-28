@@ -19,6 +19,12 @@
       "enum": ["UNKNOWN_KARYOTYPE", "XX", "XY", "XO", "XXY", "XXX", "XXYY", "XXXY", "XXXX", "XYY", "OTHER_KARYOTYPE" ],
       "default": "UNKNOWN_KARYOTYPE"
     },
+    "Timestamp": {
+      "description": "Time in date-time ISO8601 string format.",
+      "type": "string",
+      "format": "date-time",
+      "examples": [ "1999-08-05T17:21:00+01:00", "2002-09-21T02:37:00-08:00" ]
+    },
     "Ethnicity": {
       "description": "Ethnic background of the individual. Recommended is the use of a value from NCIT Race (NCIT:C17049) ontology term descendants, e.g. NCIT:C126531 (Latin American). A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent. [ NCI ]",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
@@ -43,14 +49,14 @@
       ]
     },
     "SeverityLevel": {
-      "description": "Level/severity ontology when and as applicable to phenotype observed. Value from Human Phenotype Ontology (HP:0012824), e.g `mild`. The intensity or degree of a manifestation. [ HPO:probinson ] ",
+      "description": "Severity as applicable to phenotype or disease observed. Recommended are values from Human Phenotype Ontology (HP:0012824), e.g `mild`. The intensity or degree of a manifestation. Source: Phenopackets v2",
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
       "examples": [
-        { "id": "HP:0012825", "label": "Severe" },
+        { "id": "HP:0012828", "label": "Severe" },
         { "id": "HP:0012829", "label": "Profound" },
         { "id": "HP:0012826", "label": "Moderate" },
         { "id": "HP:0012825", "label": "Mild" },
-        { "id": "HP:0012827", "label": "Bordeline" }
+        { "id": "HP:0012827", "label": "Borderline" }
       ]
     },
     "Unit": {

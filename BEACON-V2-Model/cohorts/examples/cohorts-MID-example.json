@@ -1,14 +1,14 @@
 {
   "$schema": "../defaultSchema.json",
-  "cohortId": "cohort0001",
-  "cohortName": "GCAT Genomes for Life",
+  "id": "cohort0001",
+  "name": "GCAT Genomes for Life",
   "cohortType": "study-defined",
   "cohortDesign": {
     "id": "OMIABIS:0001019",
     "label": "longitudinal study design"
   },
   "cohortSize": 20000,
-  "cohortInclusionCriteria": {
+  "inclusionCriteria": {
     "ageRange": {
       "start": { "iso8601duration": "P18Y" },
       "end": { "iso8601duration": "P40Y" }

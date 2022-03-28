@@ -21,13 +21,6 @@
       "sequenceId": "refseq:NC_000001.11"
     }
   },
-  "position": {
-    "assemblyId": "GRCh38",
-    "refseqId": "chr1",
-    "start": [
-      55039979
-    ]
-  },
   "identifiers": {
     "variantAlternativeIds": [
       "dbSNP:rs3975092470",

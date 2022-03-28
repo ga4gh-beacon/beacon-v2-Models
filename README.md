@@ -12,5 +12,5 @@ The GA4GH Beacon specification is composed by two parts:
 
 Additional information is now accessible through the [Beacon v2 Documentation](http://docs.genomebeacons.org/models/).
 
-**NOTE**: This is the project for Beacon v2 models development. The final Beacon v2 Farmework
+**NOTE**: This is the project for Beacon v2 models development. The final Beacon v2 Framework
 and Models will be made availble through the unified [`beacon-v2`](https://github.com/ga4gh-beacon/beacon-v2) repository.

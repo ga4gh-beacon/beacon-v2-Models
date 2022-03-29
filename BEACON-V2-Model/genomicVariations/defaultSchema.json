@@ -134,8 +134,10 @@
       "type": "object",
       "properties": {
       "geneIds": {
-        "type": "array",
-        "items": "string",
+       "type": "array",
+        "items": {
+          "type": "string"
+        },
         "examples": [
           ["ACE2"], ["BRCA1"]
         ]

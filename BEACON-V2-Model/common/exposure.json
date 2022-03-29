@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Procedure",
+  "title": "Exposure",
   "description": "Exposures (lifestyle, behavioural exposures) occurred to individual,defined by exposure ID, date and age of onset, dose, and duration.",
   "type": "object",
   "properties": {

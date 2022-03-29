@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Treament",
+  "title": "Treatment",
   "description": "Treatment(s) prescribed/administered, defined by treatment ID, date and age of onset, dose, schedule and duration.",
   "$comments": "Compares to https://github.com/phenopackets/phenopacket-schema/blob/master/docs/treatment.rst, with modifications.",
   "type": "object",

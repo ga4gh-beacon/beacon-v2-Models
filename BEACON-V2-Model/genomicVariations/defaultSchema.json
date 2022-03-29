@@ -77,6 +77,8 @@
       }
     },
     "Identifiers": {
+     "type": "object",
+      "properties": {
       "variantAlternativeIds": {
         "description": "List of cross-referencing ID(s), for the variant in other databases (e.g. dbSNP, ClinVar, ClinGen, COSMIC), as `externalReferences` with CURIE(s).",
         "type": "array",
@@ -126,8 +128,11 @@
         "type": "string",
         "examples": ["clinvar:12345", "9325"]
       }
+     }
     },
     "MolecularAttributes": {
+      "type": "object",
+      "properties": {
       "geneIds": {
         "type": "array",
         "items": "string",
@@ -163,6 +168,7 @@
           ["V304*"]
         ]
       }
+     }
     },
     "GenomicFeature": {
       "description": "Genomic feature(s) related to the variant. NOTE: Although genes could also be referenced using these attributes, they have an independent section to allow direct queries.",
@@ -360,6 +366,8 @@
       "required": ["biosampleId"]
     },
     "VariantLevelData": {
+      "type": "object",
+      "properties": {
       "clinicalInterpretations": {
         "type": "array",
         "items": {
@@ -372,6 +380,7 @@
           "$ref": "#/definitions/PhenoClinicEffect"
         }
       }
+     }
     },
     "SoftwareTool": {
       "type": "object",

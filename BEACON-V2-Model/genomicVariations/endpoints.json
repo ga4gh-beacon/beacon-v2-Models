@@ -27,6 +27,8 @@
           { "$ref": "#/components/parameters/referenceName" },
           { "$ref": "#/components/parameters/referenceBases" },
           { "$ref": "#/components/parameters/alternateBases" },
+          { "$ref": "#/components/parameters/variantMinLength" },
+          { "$ref": "#/components/parameters/variantMaxLength" },
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
           { "$ref": "#/components/parameters/geneId" },
           { "$ref": "#/components/parameters/aminoacidChange" }
@@ -315,6 +317,24 @@
         "in": "query",
         "schema": {
           "type": "string"
+        }
+      },
+      "variantMinLength": {
+        "name": "variantMinLength",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "format": "int64",
+          "minimum": 0
+        }
+      },
+      "variantMaxLength": {
+        "name": "variantMaxLength",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "format": "int64",
+          "minimum": 0
         }
       },
       "genomicAlleleShortForm": {

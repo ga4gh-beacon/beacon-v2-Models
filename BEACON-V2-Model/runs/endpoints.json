@@ -20,7 +20,8 @@
           { "$ref": "#/components/parameters/requestedSchema" },
           { "$ref": "#/components/parameters/skip" },
           { "$ref": "#/components/parameters/limit" },
-          { "$ref": "#/components/parameters/includeResultsetResponses" }
+          { "$ref": "#/components/parameters/includeResultsetResponses" },
+          { "$ref": "#/components/parameters/filterIds" }
         ],
         "description": "Get a list of sequencing runs",
         "operationId": "getRuns",
@@ -266,6 +267,17 @@
         "required": true,
         "schema": {
           "type": "string"
+        }
+      },
+      "filterIds": {
+        "name": "filterIds",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": "OBI:0002048"
         }
       }
     }

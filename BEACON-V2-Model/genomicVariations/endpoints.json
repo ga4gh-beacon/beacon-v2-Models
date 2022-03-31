@@ -31,7 +31,8 @@
           { "$ref": "#/components/parameters/variantMaxLength" },
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
           { "$ref": "#/components/parameters/geneId" },
-          { "$ref": "#/components/parameters/aminoacidChange" }
+          { "$ref": "#/components/parameters/aminoacidChange" },
+          { "$ref": "#/components/parameters/filterIds" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",
@@ -360,6 +361,17 @@
           "type": "string"
         },
         "example": "V600E"
+      },
+      "filterIds": {
+        "name": "filterIds",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": "EFO:0009655"
+        }
       }
     }
   }

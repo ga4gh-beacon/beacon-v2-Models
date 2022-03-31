@@ -28,7 +28,8 @@
         "parameters": [
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
-          { "$ref":"#/components/parameters/limit" }
+          { "$ref":"#/components/parameters/limit" },
+          { "$ref": "#/components/parameters/filterIds" }
         ],
         "description": "Get a list of datasets",
         "operationId": "getDatasets",
@@ -384,6 +385,17 @@
         "required": true,
         "schema":{
           "type":"string"
+        }
+      },
+      "filterIds": {
+        "name": "filterIds",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": "DUO:0000007"
         }
       }
     }

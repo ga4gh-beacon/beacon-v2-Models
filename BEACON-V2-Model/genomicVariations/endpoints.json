@@ -370,7 +370,7 @@
           "items": {
             "type": "string"
           },
-          "example": "EFO:0009655"
+          "examples": [ ["EFO:0009655"], [ "NCIT:C48725", "NCIT:C28080" ] ]
         }
       }
     }

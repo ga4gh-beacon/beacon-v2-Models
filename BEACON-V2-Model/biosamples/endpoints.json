@@ -325,7 +325,7 @@
           "items": {
             "type": "string"
           },
-          "example": "NCIT:C3222"
+          "examples": [ [ "NCIT:C3222" ], [ "OBI:0100058", "NCIT:C4813" ] ]
         }
       }
     }

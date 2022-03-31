@@ -299,7 +299,7 @@
           "items": {
             "type": "string"
           },
-          "example": "OMIABIS:0001017"
+          "examples": [ [ "OMIABIS:0001017" ] ]
         }
       }
     }

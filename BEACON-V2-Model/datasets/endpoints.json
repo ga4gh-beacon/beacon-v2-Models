@@ -395,7 +395,7 @@
           "items": {
             "type": "string"
           },
-          "example": "DUO:0000007"
+          "examples": [ "DUO:0000007" ]
         }
       }
     }

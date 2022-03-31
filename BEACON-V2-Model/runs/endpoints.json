@@ -277,7 +277,7 @@
           "items": {
             "type": "string"
           },
-          "example": "OBI:0002048"
+          "examples": [ [ "OBI:0002048" ] ]
         }
       }
     }

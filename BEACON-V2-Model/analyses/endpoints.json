@@ -220,7 +220,7 @@
           "items": {
             "type": "string"
           },
-          "example": "variantcaller:GATK4.0"
+          "examples": [ [ "variantcaller:GATK4.0" ] ]
         }
       }
     }

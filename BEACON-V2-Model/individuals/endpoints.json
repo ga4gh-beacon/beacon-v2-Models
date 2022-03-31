@@ -322,7 +322,7 @@
           "items": {
             "type": "string"
           },
-          "example": "NCIT:C20197"
+          "examples": [ [ "NCIT:C20197" ] ]
         }
       }
     }

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/requests/requestParameters.json",
+  "analysis": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "runId": {
+        "type": "string"
+      },
+      "biosampleId": {
+        "type": "string"
+      },
+      "individualId": {
+        "type": "string"
+      }
+    }
+  }
+}

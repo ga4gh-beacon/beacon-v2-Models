@@ -11,9 +11,18 @@
   "properties": {
     "variation": {
       "oneOf": [
-        {"$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2/schema/vrs.json#/definitions/MolecularVariation" },
-        {"$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2/schema/vrs.json#/definitions/SystemicVariation" },
-        {"$ref": "#/definitions/LegacyVariation" }
+        {
+          "MolecularVariation":
+            {"$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2/schema/vrs.json#/definitions/MolecularVariation" }
+        },
+        {
+          "SystemicVariation":
+            {"$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2/schema/vrs.json#/definitions/SystemicVariation" }
+        },
+        {
+          "LegacyVariation":
+            {"$ref": "#/definitions/LegacyVariation" }
+        }
       ]
     },
     "variantInternalId": {

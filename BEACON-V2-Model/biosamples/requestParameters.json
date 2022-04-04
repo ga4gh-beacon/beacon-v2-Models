@@ -3,12 +3,18 @@
   "biosample": {
     "type": "object",
     "properties": {
-      "id": {
-        "type": "string"
+      "ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
       },
-      "individualId": {
-        "type": "string"
-      }
+      "individualIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+      },
     }
   }
 }

@@ -32,7 +32,7 @@
           { "$ref": "#/components/parameters/genomicAlleleShortForm" },
           { "$ref": "#/components/parameters/geneId" },
           { "$ref": "#/components/parameters/aminoacidChange" },
-          { "$ref": "#/components/parameters/filterIds" }
+          { "$ref": "#/components/parameters/filters" }
         ],
         "description": "Get a list of example entries",
         "operationId": "getExampleEntries",
@@ -362,8 +362,8 @@
         },
         "example": "V600E"
       },
-      "filterIds": {
-        "name": "filterIds",
+      "filters": {
+        "name": "filters",
         "in": "query",
         "schema": {
           "type": "array",

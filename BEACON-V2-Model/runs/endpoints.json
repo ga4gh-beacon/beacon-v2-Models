@@ -21,7 +21,7 @@
           { "$ref": "#/components/parameters/skip" },
           { "$ref": "#/components/parameters/limit" },
           { "$ref": "#/components/parameters/includeResultsetResponses" },
-          { "$ref": "#/components/parameters/filterIds" }
+          { "$ref": "#/components/parameters/filters" }
         ],
         "description": "Get a list of sequencing runs",
         "operationId": "getRuns",
@@ -269,8 +269,8 @@
           "type": "string"
         }
       },
-      "filterIds": {
-        "name": "filterIds",
+      "filters": {
+        "name": "filters",
         "in": "query",
         "schema": {
           "type": "array",

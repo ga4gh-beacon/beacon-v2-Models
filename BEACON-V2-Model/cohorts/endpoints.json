@@ -29,7 +29,7 @@
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" },
-          { "$ref": "#/components/parameters/filterIds" }
+          { "$ref": "#/components/parameters/filters" }
         ],
         "description": "Get a list of cohorts",
         "operationId": "getCohorts",
@@ -291,8 +291,8 @@
           "type":"string"
         }
       },
-      "filterIds": {
-        "name": "filterIds",
+      "filters": {
+        "name": "filters",
         "in": "query",
         "schema": {
           "type": "array",

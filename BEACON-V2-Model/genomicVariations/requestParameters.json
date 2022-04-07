@@ -6,6 +6,18 @@
       "assemblyId": {
         "$ref": "./requestParametersComponents.json#/definitions/Assembly"
       },
+      "ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "datasetIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
       "referenceName": {
         "$ref": "./requestParametersComponents.json#/definitions/RefSeqId"
       },

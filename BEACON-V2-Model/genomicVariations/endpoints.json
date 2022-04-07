@@ -21,6 +21,8 @@
           { "$ref": "#/components/parameters/skip" },
           { "$ref": "#/components/parameters/limit" },
           { "$ref": "#/components/parameters/includeResultsetResponses" },
+          { "$ref": "#/components/parameters/ids" },
+          { "$ref": "#/components/parameters/datasetIds" },
           { "$ref": "#/components/parameters/start" },
           { "$ref": "#/components/parameters/end" },
           { "$ref": "#/components/parameters/assemblyId" },
@@ -254,6 +256,26 @@
       },
       "includeResultsetResponses": {
         "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/IncludeResultsetResponses"
+      },
+      "ids": {
+        "name": "id",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "datasetIds": {
+        "name": "datasetId",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       },
       "entryId": {
         "name": "id",

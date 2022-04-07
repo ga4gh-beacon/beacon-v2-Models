@@ -7,14 +7,14 @@
         "type": "array",
         "items": {
           "type": "string"
-        },
+        }
       },
-      "individualIds": {
+      "datasetIds": {
         "type": "array",
         "items": {
           "type": "string"
-        },
-      },
+        }
+      }
     }
   }
 }

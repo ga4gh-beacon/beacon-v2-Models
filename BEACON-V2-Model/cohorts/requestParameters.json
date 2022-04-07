@@ -3,8 +3,17 @@
   "cohort": {
     "type": "object",
     "properties": {
-      "id": {
-        "type": "string"
+      "ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "datasetIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     }
   }

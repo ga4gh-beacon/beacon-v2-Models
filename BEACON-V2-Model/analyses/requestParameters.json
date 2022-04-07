@@ -3,17 +3,17 @@
   "analysis": {
     "type": "object",
     "properties": {
-      "id": {
-        "type": "string"
+      "ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
-      "runId": {
-        "type": "string"
-      },
-      "biosampleId": {
-        "type": "string"
-      },
-      "individualId": {
-        "type": "string"
+      "datasetIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     }
   }

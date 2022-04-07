@@ -13,7 +13,11 @@
         { "id": "OMIM:164400", "label": "Spinocerebellar ataxia 1" }
       ]
     },
-    "ageOfOnset": {
+    "excluded": {
+      "description": "Flag to indicate whether the disease was observed or not. This modifier indicates the logical negation of the OntologyClass used in the ‘term’ field. Provenance: GA4GH Phenopackets v2 `Disease.excluded`",
+      "type": "boolean"
+    },
+    "onset": {
       "$ref": "./timeElement.json",
       "examples": [
         { "ageGroup": { "id": "NCIT:C49685", "label": "Adult 18-65 Years Old" }, "age": { "iso8601duration": "P32Y6M1D" } },
@@ -21,14 +25,34 @@
         { "age": { "iso8601duration": "P2M4D" } }
       ]
     },
-    "stage": {
-      "description": "Ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119). Provenance: GA4GH Phenopackets v2 `Disease.disease_stage`",
-      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+    "resolution": {
+      "$ref": "./timeElement.json",
       "examples": [
-        { "id": "OGMS:0000119", "label": "acute onset" },
-        { "id": "OGMS:0000117", "label": "asymptomatic" },
-        { "id": "OGMS:0000106", "label": "remission" }
+        { "age": { "iso8601duration": "P2Y1M4D" } }
       ]
+    },
+    "diseaseStage": {
+      "description": "List of terms representing the disease stage e.g. AJCC stage group or ontology term from Ontology for General Medical Science (OGMS), e.g. acute onset (OGMS:0000119). Provenance: GA4GH Phenopackets v2 `Disease.disease_stage`",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
+      },
+      "examples": [
+        [ { "id": "OGMS:0000119", "label": "acute onset" } ],
+        [ { "id": "NCIT:C27975", "label": "Stage IA" }, { "id": "OGMS:0000106", "label": "remission" } ]
+      ]
+    },
+    "clinicalTnmFinding": {
+      "description": "List of terms representing the tumor TNM score, preferably as subclass of NCIT:C48698 - Cancer TNM Finding Category (NCIT:C48698).",
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json"
+      },
+      "examples": [
+        { "id": "NCIT:C48725", "label": "T2a Stage Finding" },
+        { "id": "NCIT:C48709", "label": "N1c Stage Finding" },
+        { "id": "NCIT:C48699", "label": "M0 Stage Finding" }
+      ]      
     },
     "severity": {
       "$ref": "./commonDefinitions.json#/definitions/SeverityLevel",
@@ -37,6 +61,21 @@
         { "id": "HP:0012826", "label": "Moderate" }
       ]
     },
+    "primarySite": {
+      "description": "The primary site of disease, with recommended use of a term from NCIT or UBERON. Provenance: GA4GH Phenopackets v2 `Disease.term`",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "examples": [
+        { "id": "UBERON:0004548", "label": "left eye" }
+      ]
+    },
+    "laterality": {
+      "description": "Laterality (left or right) of the primary site of sites if applicable. Provenance: GA4GH Phenopackets v2 `Disease.term`",
+      "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/ontologyTerm.json",
+      "examples": [
+        { "id": "NCIT:C160199", "label": "Tumor Laterality Right" },
+        { "id": "NCIT:C160200", "label": "Tumor Laterality Left" }
+      ]
+    },    
     "familyHistory": {
       "description": "Boolean indicating determined or self-reported presence of family history of the disease.",
       "type": "boolean",

@@ -19,7 +19,7 @@
         "id": "OMIM:164400",
         "label": "Spinocerebellar ataxia 1"
       },
-      "ageOfOnset": {
+      "onset": {
         "ageGroup": {
           "id": "NCIT:C49685",
           "label": "Adult 18-65 Years Old"

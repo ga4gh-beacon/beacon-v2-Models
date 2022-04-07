@@ -19,7 +19,7 @@
         "id": "HP:0001645",
         "label": "Sudden cardiac death"
       },
-      "ageOfOnset": {
+      "onset": {
         "ageGroup": {
           "id": "NCIT:C16731",
           "label": "Newborn"

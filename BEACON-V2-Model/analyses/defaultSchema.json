@@ -30,15 +30,21 @@
       "format": "date",
       "examples": ["2021-10-17"]
     },
-    "pipelineName": {
-      "description": "Analysis pipeline and version if a standardized pipeline was used",
-      "type": "string",
-      "examples": ["Pipeline-panel-0001-v1"]
-    },
-    "pipelineRef": {
-      "description": "Link to Analysis pipeline resource",
-      "type": "string",
-      "examples": ["https://doi.org/10.48511/workflowhub.workflow.111.1"]
+    "pipelineInfo": {
+      "description": "Public or local pipeline identifier with version, as well as link and notes.",
+      "$ref": "../common/externalReference.json",
+      "examples": [
+        {
+          "id": "Pipeline-panel-0001-v1",
+          "reference": "https://doi.org/10.48511/workflowhub.workflow.111.1",
+          "notes": "Higly customized workflow. Please contact us at dev/null."
+        },
+        {
+          "id": "aroma.affymetrix",
+          "reference": "http://www.aroma-project.org",
+          "notes": "The aroma.affymetrix package is an R package for analyzing small to extremely large Affymetrix data sets."          
+        }
+      ]
     },
     "aligner": {
       "description": "Reference to mapping/alignment software",
@@ -54,6 +60,6 @@
       "$ref": "https://raw.githubusercontent.com/ga4gh-beacon/beacon-framework-v2/main/common/beaconCommonComponents.json#/definitions/Info"
     }
   },
-  "required": ["id", "analysisDate", "pipelineName"],
+  "required": ["id", "analysisDate", "pipelineInfo"],
   "additionalProperties": true
 }

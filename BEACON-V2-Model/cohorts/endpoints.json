@@ -27,7 +27,6 @@
       "get": {
         "parameters": [
           { "$ref": "#/components/parameters/ids" },
-          { "$ref": "#/components/parameters/datasetIds" },
           { "$ref":"#/components/parameters/requestedSchema" },
           { "$ref":"#/components/parameters/skip" },
           { "$ref":"#/components/parameters/limit" }
@@ -286,16 +285,6 @@
       },
       "ids": {
         "name": "id",
-        "in": "query",
-        "schema": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "datasetIds": {
-        "name": "datasetId",
         "in": "query",
         "schema": {
           "type": "array",
